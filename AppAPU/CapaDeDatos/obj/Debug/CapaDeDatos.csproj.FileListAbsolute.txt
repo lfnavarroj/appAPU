@@ -1,0 +1,6 @@
+D:\05. Desarrollos\AppAPU\AppAPU\CapaDeDatos\bin\Debug\CapaDeDatos.dll
+D:\05. Desarrollos\AppAPU\AppAPU\CapaDeDatos\bin\Debug\CapaDeDatos.pdb
+D:\05. Desarrollos\AppAPU\AppAPU\CapaDeDatos\obj\Debug\CapaDeDatos.csprojAssemblyReference.cache
+D:\05. Desarrollos\AppAPU\AppAPU\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CoreCompileInputs.cache
+D:\05. Desarrollos\AppAPU\AppAPU\CapaDeDatos\obj\Debug\CapaDeDatos.dll
+D:\05. Desarrollos\AppAPU\AppAPU\CapaDeDatos\obj\Debug\CapaDeDatos.pdb

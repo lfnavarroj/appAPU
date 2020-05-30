@@ -1,0 +1,13 @@
+D:\05. Desarrollos\AppAPU\AppAPU\CapaDePresentacion\bin\Debug\CapaDePresentacion.exe.config
+D:\05. Desarrollos\AppAPU\AppAPU\CapaDePresentacion\bin\Debug\CapaDePresentacion.exe
+D:\05. Desarrollos\AppAPU\AppAPU\CapaDePresentacion\bin\Debug\CapaDePresentacion.pdb
+D:\05. Desarrollos\AppAPU\AppAPU\CapaDePresentacion\bin\Debug\CapaLogicaDeNegocio.dll
+D:\05. Desarrollos\AppAPU\AppAPU\CapaDePresentacion\bin\Debug\CapaLogicaDeNegocio.pdb
+D:\05. Desarrollos\AppAPU\AppAPU\CapaDePresentacion\obj\Debug\CapaPresentacion.csprojAssemblyReference.cache
+D:\05. Desarrollos\AppAPU\AppAPU\CapaDePresentacion\obj\Debug\CapaDePresentacion.Properties.Resources.resources
+D:\05. Desarrollos\AppAPU\AppAPU\CapaDePresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+D:\05. Desarrollos\AppAPU\AppAPU\CapaDePresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+D:\05. Desarrollos\AppAPU\AppAPU\CapaDePresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
+D:\05. Desarrollos\AppAPU\AppAPU\CapaDePresentacion\obj\Debug\CapaDePresentacion.exe
+D:\05. Desarrollos\AppAPU\AppAPU\CapaDePresentacion\obj\Debug\CapaDePresentacion.pdb
+D:\05. Desarrollos\AppAPU\AppAPU\CapaDePresentacion\obj\Debug\CapaDePresentacion.Form1.resources

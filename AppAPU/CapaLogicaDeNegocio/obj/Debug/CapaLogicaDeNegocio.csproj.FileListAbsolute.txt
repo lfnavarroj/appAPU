@@ -1,0 +1,9 @@
+D:\05. Desarrollos\AppAPU\AppAPU\CapaLogicaDeNegocio\bin\Debug\CapaLogicaDeNegocio.dll
+D:\05. Desarrollos\AppAPU\AppAPU\CapaLogicaDeNegocio\bin\Debug\CapaLogicaDeNegocio.pdb
+D:\05. Desarrollos\AppAPU\AppAPU\CapaLogicaDeNegocio\bin\Debug\CapaDeDatos.dll
+D:\05. Desarrollos\AppAPU\AppAPU\CapaLogicaDeNegocio\bin\Debug\CapaDeDatos.pdb
+D:\05. Desarrollos\AppAPU\AppAPU\CapaLogicaDeNegocio\obj\Debug\CapaLogicaDeNegocio.csprojAssemblyReference.cache
+D:\05. Desarrollos\AppAPU\AppAPU\CapaLogicaDeNegocio\obj\Debug\CapaLogicaDeNegocio.csproj.CoreCompileInputs.cache
+D:\05. Desarrollos\AppAPU\AppAPU\CapaLogicaDeNegocio\obj\Debug\CapaLogicaDeNegocio.csproj.CopyComplete
+D:\05. Desarrollos\AppAPU\AppAPU\CapaLogicaDeNegocio\obj\Debug\CapaLogicaDeNegocio.dll
+D:\05. Desarrollos\AppAPU\AppAPU\CapaLogicaDeNegocio\obj\Debug\CapaLogicaDeNegocio.pdb
