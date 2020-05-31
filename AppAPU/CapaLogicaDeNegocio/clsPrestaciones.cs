@@ -18,5 +18,11 @@ namespace CapaLogicaDeNegocio
         public string Descripcion_prestacion { get => _descripcion_prestacion; set => _descripcion_prestacion = value; }
         public string Unidad_prestacion { get => _unidad_prestacion; set => _unidad_prestacion = value; }
         public float Valor_prestacion { get => _valor_prestacion; set => _valor_prestacion = value; }
+
+
+        public void EliminiarMaterial()
+        {
+
+        }
     }
 }
