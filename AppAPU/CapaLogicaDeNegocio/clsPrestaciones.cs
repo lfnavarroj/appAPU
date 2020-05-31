@@ -20,7 +20,7 @@ namespace CapaLogicaDeNegocio
         public float Valor_prestacion { get => _valor_prestacion; set => _valor_prestacion = value; }
 
 
-        public void EliminiarMaterial()
+        public void EliminiarPrestacion()
         {
 
         }
