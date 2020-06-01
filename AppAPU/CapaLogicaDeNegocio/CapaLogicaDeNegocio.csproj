@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsCostos.cs" />
+    <Compile Include="clsEquipos.cs" />
     <Compile Include="clsMateriales.cs" />
     <Compile Include="clsProveedores.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
