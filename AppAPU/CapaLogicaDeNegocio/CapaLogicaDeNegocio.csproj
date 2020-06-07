@@ -44,6 +44,7 @@
     <Compile Include="clsCostos.cs" />
     <Compile Include="clsEquipos.cs" />
     <Compile Include="clsMateriales.cs" />
+    <Compile Include="clsPresupuestos.cs" />
     <Compile Include="clsProveedores.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
