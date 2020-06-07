@@ -16,3 +16,7 @@ F:\03. Desarrollos\AppAPU\CapaLogicaDeNegocio\obj\Debug\CapaLogicaDeNegocio.cspr
 F:\03. Desarrollos\AppAPU\CapaLogicaDeNegocio\obj\Debug\CapaLogicaDeNegocio.csproj.CopyComplete
 F:\03. Desarrollos\AppAPU\CapaLogicaDeNegocio\obj\Debug\CapaLogicaDeNegocio.dll
 F:\03. Desarrollos\AppAPU\CapaLogicaDeNegocio\obj\Debug\CapaLogicaDeNegocio.pdb
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaLogicaDeNegocio\obj\Debug\CapaLogicaDeNegocio.csprojAssemblyReference.cache
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaLogicaDeNegocio\obj\Debug\CapaLogicaDeNegocio.csproj.CoreCompileInputs.cache
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaLogicaDeNegocio\obj\Debug\CapaLogicaDeNegocio.dll
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaLogicaDeNegocio\obj\Debug\CapaLogicaDeNegocio.pdb
