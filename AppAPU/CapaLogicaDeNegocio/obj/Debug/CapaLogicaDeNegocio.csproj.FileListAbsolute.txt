@@ -20,3 +20,8 @@ C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaLogicaDeNegocio\obj\Debu
 C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaLogicaDeNegocio\obj\Debug\CapaLogicaDeNegocio.csproj.CoreCompileInputs.cache
 C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaLogicaDeNegocio\obj\Debug\CapaLogicaDeNegocio.dll
 C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaLogicaDeNegocio\obj\Debug\CapaLogicaDeNegocio.pdb
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaLogicaDeNegocio\bin\Debug\CapaLogicaDeNegocio.dll
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaLogicaDeNegocio\bin\Debug\CapaLogicaDeNegocio.pdb
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaLogicaDeNegocio\bin\Debug\CapaDeDatos.dll
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaLogicaDeNegocio\bin\Debug\CapaDeDatos.pdb
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaLogicaDeNegocio\obj\Debug\CapaLogicaDeNegocio.csproj.CopyComplete

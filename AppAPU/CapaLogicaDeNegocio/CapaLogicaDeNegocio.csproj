@@ -41,20 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsCapitulos.cs" />
     <Compile Include="clsCostos.cs" />
-    <Compile Include="clsEmpresas.cs" />
     <Compile Include="clsEquipos.cs" />
     <Compile Include="clsHerramientas.cs" />
     <Compile Include="clsMateriales.cs" />
-    <Compile Include="clsPerfiles.cs" />
     <Compile Include="clsPrestaciones.cs" />
     <Compile Include="clsPresupuestos.cs" />
     <Compile Include="clsProveedores.cs" />
-    <Compile Include="clsProyectos.cs" />
     <Compile Include="clsTipoCostos.cs" />
-    <Compile Include="clsUnitarios.cs" />
-    <Compile Include="clsUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

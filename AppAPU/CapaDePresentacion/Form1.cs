@@ -26,7 +26,7 @@ namespace CapaDePresentacion
             objeto.Nombre_material = "Cable#2";
             objeto.Precio_material = 1250;
 
-            label1.Text= ("El material creado es " + objeto.Nombre_material +" Cuesta " +objeto.Precio_material.ToString());
+            label6.Text= ("El material creado es " + objeto.Nombre_material +" Cuesta " +objeto.Precio_material.ToString());
             //Console.ReadLine();
         }
     }
