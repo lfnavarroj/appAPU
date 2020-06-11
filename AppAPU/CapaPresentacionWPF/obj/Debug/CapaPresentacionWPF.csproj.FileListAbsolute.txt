@@ -1,0 +1,15 @@
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\bin\Debug\CapaPresentacionWPF.exe.config
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\bin\Debug\CapaPresentacionWPF.exe
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\bin\Debug\CapaPresentacionWPF.pdb
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\CapaPresentacionWPF.csprojAssemblyReference.cache
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\MainWindow.g.cs
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\App.g.cs
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\CapaPresentacionWPF_MarkupCompile.cache
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\CapaPresentacionWPF_MarkupCompile.lref
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\MainWindow.baml
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\CapaPresentacionWPF.g.resources
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\CapaPresentacionWPF.Properties.Resources.resources
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\CapaPresentacionWPF.csproj.GenerateResource.cache
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\CapaPresentacionWPF.csproj.CoreCompileInputs.cache
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\CapaPresentacionWPF.exe
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\CapaPresentacionWPF.pdb
