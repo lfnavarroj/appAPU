@@ -10,7 +10,6 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace CapaPresentacionWPF
@@ -23,17 +22,6 @@ namespace CapaPresentacionWPF
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (e.LeftButton == MouseButtonState.Pressed)
-                DragMove();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
         }
     }
 }
