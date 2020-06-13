@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialDesignThemes.Wpf;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,24 @@ namespace CapaPresentacionWPF
         public MainWindow()
         {
             InitializeComponent();
+
+            List<MenuItem> menu = new List<MenuItem>
+            {
+                new MenuItem("Create project", PackIconKind.CreateNewFolder),
+                new MenuItem("Find project", PackIconKind.FileFind),
+                new MenuItem("List projects", PackIconKind.ViewList),
+                new MenuItem("Manage users", PackIconKind.UserEdit),
+                new MenuItem("Manage resources", PackIconKind.DatabaseEdit),
+                new MenuItem("Exit", PackIconKind.ExitToApp)
+            };
+
+            ListViewMenu.ItemsSource = menu;
+        }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+                DragMove();
         }
     }
 }
