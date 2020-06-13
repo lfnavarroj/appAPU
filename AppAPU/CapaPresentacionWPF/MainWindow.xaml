@@ -3,24 +3,110 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CapaPresentacionWPF"
+        xmlns:local="clr-namespace:CapaPresentacionWPF" xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="608">
-    <Grid Margin="18,1,307.6,-1">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="0*"/>
-            <ColumnDefinition Width="0*"/>
-        </Grid.ColumnDefinitions>
-        <Rectangle Fill="#FF1F4E79" Height="410" Stroke="#FFFFC000" VerticalAlignment="Top" Margin="-19,0,-290,0" Grid.ColumnSpan="3"/>
-        <Rectangle Fill="#FF1F4E79" HorizontalAlignment="Left" Height="42" Margin="62,11,0,0" Stroke="White" VerticalAlignment="Top" Width="27"/>
-        <Rectangle Fill="#FF002060" HorizontalAlignment="Left" Height="42" Margin="0,11,0,0" Stroke="#FFFFC000" VerticalAlignment="Top" Width="63"/>
-        <Label Content="M" HorizontalAlignment="Left" Margin="59,11,0,0" VerticalAlignment="Top" Width="30" RenderTransformOrigin="-0.216,2.25" FontSize="24" FontFamily="Candara Light" FontWeight="Bold" Foreground="White" Height="40"/>
-        <Label Content="EPRO" HorizontalAlignment="Left" Margin="0,11,0,0" VerticalAlignment="Top" Width="67" RenderTransformOrigin="-0.216,2.25" FontSize="24" FontFamily="Candara Light" FontWeight="Bold" Foreground="#FFFFC000" Background="{x:Null}" Height="40"/>
-        <Rectangle Fill="#FF1F4E79" HorizontalAlignment="Left" Height="29" Margin="110,134,0,0" Stroke="White" VerticalAlignment="Top" Width="78"/>
-        <Rectangle Fill="#FF002060" HorizontalAlignment="Left" Height="49" Margin="110,85,0,0" Stroke="#FFFFC000" VerticalAlignment="Top" Width="78"/>
-        <Label Content="MANAGER" HorizontalAlignment="Left" Margin="110,134,0,0" VerticalAlignment="Top" Width="78" RenderTransformOrigin="-0.216,2.25" FontSize="15" FontFamily="Candara Light" FontWeight="Bold" Foreground="White" Height="29"/>
-        <Label Content="ELECTRICAL" HorizontalAlignment="Left" Margin="110,85,0,0" VerticalAlignment="Top" Width="78" RenderTransformOrigin="-0.216,2.25" FontFamily="Candara Light" FontWeight="Bold" Foreground="#FFFFC000" Background="{x:Null}" Height="28" FontSize="13.5"/>
-        <Label Content="PROJECT" HorizontalAlignment="Left" Margin="110,105,0,0" VerticalAlignment="Top" Width="78" RenderTransformOrigin="-0.216,2.25" FontSize="18" FontFamily="Candara Light" FontWeight="Bold" Foreground="#FFFFC000" Background="{x:Null}" Height="32"/>
+        Title="MainWindow" Height="450" Width="380"
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" ResizeMode="NoResize"
+        MouseDown="Window_MouseDown"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Border CornerRadius="10" Grid.RowSpan="2">
+                <Border.Background>
+                    <LinearGradientBrush Opacity="0.95">
+                        <GradientStop Color="#FF002060" Offset="0"/>
+                        <GradientStop Color="#FF1F4E79" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="ELECTRICAL" 
+                           FontFamily="Candida Light" 
+                           FontSize="14.5"
+                           Foreground="#FFFFC000"
+                           HorizontalAlignment="Center"/>
+
+                <TextBlock Text="PROJECT"
+                           FontFamily="Candida Light" 
+                           FontSize="20"
+                           Foreground="#FFFFC000"
+                           HorizontalAlignment="Center"/>
+
+                <Border Width="77"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.5"/>
+
+                <TextBlock Text="MANAGER"
+                           FontFamily="Candida Light" 
+                           FontSize="16.5"
+                           Foreground="White"
+                           HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1">
+                <StackPanel Orientation="Horizontal">
+                    <TextBox Text="Username"
+                             FontFamily="Candida Light"
+                             FontSize="20"
+                             HorizontalAlignment="Center"
+                             Foreground="White"
+                             Background="Transparent"
+                             BorderThickness="0"
+                             Width="230"
+                             HorizontalContentAlignment="Left"
+                             Opacity="0.5"
+                             Margin="67,0,0,0"/>
+
+                    <iconPacks:PackIconMaterial Kind="Account"
+                                                VerticalAlignment="Center"
+                                                HorizontalAlignment="Center"
+                                                Foreground="White"/>
+                </StackPanel>
+
+                <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.5"/>
+
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                    <PasswordBox Password="Password"
+                                 FontFamily="Candida Light"
+                                 FontSize="20"
+                                 HorizontalAlignment="Center"
+                                 Foreground="White"
+                                 Background="Transparent"
+                                 BorderThickness="0"
+                                 Width="230"
+                                 HorizontalContentAlignment="Left"
+                                 Opacity="0.5"
+                                 Margin="67,0,0,0"/>
+
+                    <iconPacks:PackIconMaterial Kind="FormTextboxPassword"
+                                                VerticalAlignment="Center"
+                                                HorizontalAlignment="Center"
+                                                Foreground="White"/>
+                </StackPanel>
+
+                <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.5"/>
+
+                <StackPanel Orientation="Horizontal" 
+                            HorizontalAlignment="Center" 
+                            Margin="0,60,0,0">
+                    <Button Width="250" Height="25" Content="LOGIN"/>
+                </StackPanel>
+
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>
