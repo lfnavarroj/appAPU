@@ -67,6 +67,17 @@
             
         </StackPanel>
         
-        <StackPanel Margin="200,0,0,0"></StackPanel>
+        <StackPanel Margin="200,0,0,0">
+            <Grid Width="60" Height="30" HorizontalAlignment="Right">
+                
+                <Button Margin="-30,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Height="20" Width="20">
+                    <materialDesign:PackIcon Kind="WindowMinimize" HorizontalAlignment="Center" Height="15" Width="15"/>
+                </Button>
+
+                <Button Margin="30,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Height="20" Width="20">
+                    <materialDesign:PackIcon Kind="Power" HorizontalAlignment="Center" Height="15" Width="15"/>
+                </Button>
+            </Grid>
+        </StackPanel>
     </Grid>
 </Window>

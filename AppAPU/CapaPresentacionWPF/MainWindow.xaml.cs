@@ -29,8 +29,10 @@ namespace CapaPresentacionWPF
                 new MenuItem("Create project", PackIconKind.CreateNewFolder),
                 new MenuItem("Find project", PackIconKind.FileFind),
                 new MenuItem("List projects", PackIconKind.ViewList),
-                new MenuItem("Manage users", PackIconKind.UserEdit),
                 new MenuItem("Manage resources", PackIconKind.DatabaseEdit),
+                new MenuItem("Manage users", PackIconKind.UserEdit),
+                new MenuItem("Settings", PackIconKind.Settings),
+                new MenuItem("Help", PackIconKind.Help),
                 new MenuItem("Exit", PackIconKind.ExitToApp)
             };
 
