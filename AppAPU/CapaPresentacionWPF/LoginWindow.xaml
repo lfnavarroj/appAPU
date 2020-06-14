@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CapaPresentacionWPF"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="380"
         AllowsTransparency="True" Background="Transparent"
@@ -12,49 +13,112 @@
         MouseDown="Window_MouseDown"
         WindowStartupLocation="CenterScreen">
     <Grid>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
 
-            <Border CornerRadius="10" Grid.RowSpan="2">
-                <Border.Background>
-                    <LinearGradientBrush Opacity="0.95">
-                        <GradientStop Color="#FF002060" Offset="0"/>
-                        <GradientStop Color="#FF1F4E79" Offset="1"/>
-                    </LinearGradientBrush>
-                </Border.Background>
-            </Border>
+        <Border CornerRadius="10" Grid.RowSpan="2">
+            <Border.Background>
+                <LinearGradientBrush Opacity="0.95">
+                    <GradientStop Color="#FF002060" Offset="0"/>
+                    <GradientStop Color="#FF1F4E79" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
 
-            <StackPanel VerticalAlignment="Center">
-                <TextBlock Text="ELECTRICAL" 
-                           FontFamily="Candida Light" 
-                           FontSize="14.5"
-                           Foreground="#FFFFC000"
-                           HorizontalAlignment="Center"/>
+        <StackPanel Width="60" 
+                    Height="30" 
+                    HorizontalAlignment="Right" 
+                    VerticalAlignment="Top"
+                    Orientation="Horizontal">
 
-                <TextBlock Text="PROJECT"
-                           FontFamily="Candida Light" 
-                           FontSize="20"
-                           Foreground="#FFFFC000"
-                           HorizontalAlignment="Center"/>
+            <Button Margin="5,0,0,0" 
+                    Background="{x:Null}" 
+                    BorderBrush="{x:Null}" 
+                    Padding="0" 
+                    Height="20" 
+                    Width="20" 
+                    Click="Button_Click_2">
 
-                <Border Width="77"
-                        Height="2"
-                        Background="White"
-                        Opacity="0.5"/>
+                <materialDesign:PackIcon Kind="WindowMinimize"
+                                         HorizontalAlignment="Center" 
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"/>
 
-                <TextBlock Text="MANAGER"
-                           FontFamily="Candida Light" 
-                           FontSize="16.5"
-                           Foreground="White"
-                           HorizontalAlignment="Center"/>
+            </Button>
+
+            <Button Margin="10,0,0,0" 
+                    Background="{x:Null}" 
+                    BorderBrush="{x:Null}" 
+                    Padding="0" 
+                    Height="20" 
+                    Width="20" 
+                    Click="Button_Click_1">
+
+                <materialDesign:PackIcon 
+                    Kind="Power" 
+                    HorizontalAlignment="Center" 
+                    Height="15" 
+                    Width="15"/>
+                
+            </Button>
+
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock Text="ELECTRICAL" 
+                       FontFamily="Candida Light" 
+                       FontSize="14.5"
+                       Foreground="#FFFFC000"
+                       HorizontalAlignment="Center"/>
+
+            <TextBlock Text="PROJECT"
+                       FontFamily="Candida Light" 
+                       FontSize="20"
+                       Foreground="#FFFFC000"
+                       HorizontalAlignment="Center"/>
+
+            <Border Width="77"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+
+            <TextBlock Text="MANAGER"
+                       FontFamily="Candida Light" 
+                       FontSize="16.5"
+                       Foreground="White"
+                       HorizontalAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1">
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="TextBoxUsername" 
+                         Text="Username"
+                         FontFamily="Candida Light"
+                         FontSize="20"
+                         HorizontalAlignment="Center"
+                         Foreground="White"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         Width="230"
+                         HorizontalContentAlignment="Left"
+                         Opacity="0.5"
+                         Margin="67,0,0,0"/>
+
+                <iconPacks:PackIconMaterial Kind="Account"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            Foreground="White"/>
             </StackPanel>
 
-            <StackPanel Grid.Row="1">
-                <StackPanel Orientation="Horizontal">
-                    <TextBox x:Name="TextBoxUsername" Text="Username"
+            <Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                <PasswordBox Password="Password"
                              FontFamily="Candida Light"
                              FontSize="20"
                              HorizontalAlignment="Center"
@@ -66,52 +130,30 @@
                              Opacity="0.5"
                              Margin="67,0,0,0"/>
 
-                    <iconPacks:PackIconMaterial Kind="Account"
-                                                VerticalAlignment="Center"
-                                                HorizontalAlignment="Center"
-                                                Foreground="White"/>
-                </StackPanel>
-
-                <Border Width="250"
-                        Height="2"
-                        Background="White"
-                        Opacity="0.5"/>
-
-                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
-                    <PasswordBox Password="Password"
-                                 FontFamily="Candida Light"
-                                 FontSize="20"
-                                 HorizontalAlignment="Center"
-                                 Foreground="White"
-                                 Background="Transparent"
-                                 BorderThickness="0"
-                                 Width="230"
-                                 HorizontalContentAlignment="Left"
-                                 Opacity="0.5"
-                                 Margin="67,0,0,0"/>
-
-                    <iconPacks:PackIconMaterial Kind="FormTextboxPassword"
-                                                VerticalAlignment="Center"
-                                                HorizontalAlignment="Center"
-                                                Foreground="White"/>
-                </StackPanel>
-
-                <Border Width="250"
-                        Height="2"
-                        Background="White"
-                        Opacity="0.5"/>
-
-                <StackPanel Orientation="Horizontal" 
-                            HorizontalAlignment="Center" 
-                            Margin="0,60,0,0">
-                    <Button Width="250" 
-                            Height="25" 
-                            Content="LOGIN" 
-                            Click="Button_Click"
-                            Style="{StaticResource simpleButton}"/>
-                </StackPanel>
-
+                <iconPacks:PackIconMaterial Kind="FormTextboxPassword"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            Foreground="White"/>
+                
             </StackPanel>
-        </Grid>
+
+            <Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center" 
+                        Margin="0,60,0,0">
+                
+                <Button Width="250" 
+                        Height="25" 
+                        Content="LOGIN" 
+                        Click="Button_Click"
+                        Style="{StaticResource simpleButton}"/>
+                
+            </StackPanel>
+
+        </StackPanel>
     </Grid>
 </Window>
