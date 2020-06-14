@@ -12,15 +12,26 @@
         WindowStartupLocation="CenterScreen"
         MouseDown="Window_MouseDown">
     <Grid>
-        <StackPanel Width="200" HorizontalAlignment="Left">
-            <StackPanel.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+
+            <Grid.Background>
                 <LinearGradientBrush Opacity="0.95">
                     <GradientStop Color="#FF002060" Offset="0"/>
                     <GradientStop Color="#FF1F4E79" Offset="1"/>
                 </LinearGradientBrush>
-            </StackPanel.Background>
+            </Grid.Background>
 
-            <StackPanel VerticalAlignment="Center" Margin="0,20,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <StackPanel VerticalAlignment="Center" Grid.Row="0">
                 <TextBlock Text="ELECTRICAL" 
                            FontFamily="Candida Light" 
                            FontSize="14.5"
@@ -45,40 +56,78 @@
                            HorizontalAlignment="Center"/>
             </StackPanel>
 
+            <ScrollViewer HorizontalAlignment="Stretch" 
+                          HorizontalScrollBarVisibility="Disabled"
+                          VerticalScrollBarVisibility="Auto"
+                          Grid.Row="1">
+
+                <StackPanel x:Name="Menu" Margin="10"/>
+
+            </ScrollViewer>
+                          
+            <!--
             <ListView Margin="0,30,0,0" x:Name="ListViewMenu">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="{Binding Path=Icon}" 
-                                             Width="15" Height="15" 
-                                             VerticalAlignment="Center"
-                                             Margin="5,0,0,0"/>
+                                                     Width="15" Height="15"
+                                                     VerticalAlignment="Center"
+                                                     Margin="5,0,0,0"/>
 
                             <TextBlock Text="{Binding Path=Name}" 
-                               Margin="10,0,0,0" 
-                               FontFamily="Candara Light"
-                               FontSize="16"/>
+                                       Margin="10,0,0,0" 
+                                       FontFamily="Candara Light"
+                                       FontSize="16"/>
                         </StackPanel>
                         
                     </DataTemplate>                    
                 </ListView.ItemTemplate>              
             </ListView>
+            -->
             
-        </StackPanel>
+        </Grid>
         
-        <StackPanel Margin="200,0,0,0">
-            <Grid Width="60" Height="30" HorizontalAlignment="Right">
-                
-                <Button Margin="-30,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Height="20" Width="20" Click="Button_Click">
-                    <materialDesign:PackIcon Kind="WindowMinimize" HorizontalAlignment="Center" Height="15" Width="15"/>
+        <StackPanel Grid.Column="1">
+            
+            <StackPanel Width="60" 
+                        Height="30"
+                        HorizontalAlignment="Right" 
+                        VerticalAlignment="Top"
+                        Orientation="Horizontal">
+
+                <Button Margin="5,0,0,0"
+                        Background="{x:Null}"
+                        BorderBrush="{x:Null}" 
+                        Padding="0" 
+                        Height="20" 
+                        Width="20" 
+                        Click="Button_Click">
+
+                    <materialDesign:PackIcon Kind="WindowMinimize"
+                                             HorizontalAlignment="Center"
+                                             VerticalAlignment="Center"
+                                             Height="15" Width="15"/>
+
                 </Button>
 
-                <Button Margin="30,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Height="20" Width="20" Click="Button_Click_1">
-                    <materialDesign:PackIcon Kind="Power" HorizontalAlignment="Center" Height="15" Width="15"/>
+                <Button Margin="10,0,0,0" 
+                        Background="{x:Null}" 
+                        BorderBrush="{x:Null}" 
+                        Padding="0" 
+                        Height="20" 
+                        Width="20" 
+                        Click="Button_Click_1">
+
+                    <materialDesign:PackIcon Kind="Power" 
+                                             HorizontalAlignment="Center" 
+                                             Height="15" 
+                                             Width="15"/>
+
                 </Button>
-                
-            </Grid>
+
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>

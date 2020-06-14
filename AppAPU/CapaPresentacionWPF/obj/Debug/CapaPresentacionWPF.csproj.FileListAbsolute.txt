@@ -29,3 +29,5 @@ C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\bin\Debu
 C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\bin\Debug\MaterialDesignColors.pdb
 C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\UserControlMenuItem.g.cs
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\UserControlMenuItem.baml
