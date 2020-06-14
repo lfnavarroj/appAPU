@@ -4,3 +4,9 @@ D:\05. Desarrollos\AppAPU\AppAPU\CapaDeDatos\obj\Debug\CapaDeDatos.csprojAssembl
 D:\05. Desarrollos\AppAPU\AppAPU\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CoreCompileInputs.cache
 D:\05. Desarrollos\AppAPU\AppAPU\CapaDeDatos\obj\Debug\CapaDeDatos.dll
 D:\05. Desarrollos\AppAPU\AppAPU\CapaDeDatos\obj\Debug\CapaDeDatos.pdb
+F:\03. Desarrollos\AppAPU\CapaDeDatos\bin\Debug\CapaDeDatos.dll
+F:\03. Desarrollos\AppAPU\CapaDeDatos\bin\Debug\CapaDeDatos.pdb
+F:\03. Desarrollos\AppAPU\CapaDeDatos\obj\Debug\CapaDeDatos.csprojAssemblyReference.cache
+F:\03. Desarrollos\AppAPU\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CoreCompileInputs.cache
+F:\03. Desarrollos\AppAPU\CapaDeDatos\obj\Debug\CapaDeDatos.dll
+F:\03. Desarrollos\AppAPU\CapaDeDatos\obj\Debug\CapaDeDatos.pdb

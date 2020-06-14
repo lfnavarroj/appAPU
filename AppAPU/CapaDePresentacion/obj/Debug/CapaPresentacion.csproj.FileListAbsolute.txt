@@ -11,3 +11,30 @@ D:\05. Desarrollos\AppAPU\AppAPU\CapaDePresentacion\obj\Debug\CapaPresentacion.c
 D:\05. Desarrollos\AppAPU\AppAPU\CapaDePresentacion\obj\Debug\CapaDePresentacion.exe
 D:\05. Desarrollos\AppAPU\AppAPU\CapaDePresentacion\obj\Debug\CapaDePresentacion.pdb
 D:\05. Desarrollos\AppAPU\AppAPU\CapaDePresentacion\obj\Debug\CapaDePresentacion.Form1.resources
+F:\03. Desarrollos\AppAPU\CapaDePresentacion\bin\Debug\CapaDePresentacion.exe.config
+F:\03. Desarrollos\AppAPU\CapaDePresentacion\bin\Debug\CapaDePresentacion.exe
+F:\03. Desarrollos\AppAPU\CapaDePresentacion\bin\Debug\CapaDePresentacion.pdb
+F:\03. Desarrollos\AppAPU\CapaDePresentacion\bin\Debug\CapaLogicaDeNegocio.dll
+F:\03. Desarrollos\AppAPU\CapaDePresentacion\bin\Debug\CapaLogicaDeNegocio.pdb
+F:\03. Desarrollos\AppAPU\CapaDePresentacion\obj\Debug\CapaPresentacion.csprojAssemblyReference.cache
+F:\03. Desarrollos\AppAPU\CapaDePresentacion\obj\Debug\CapaDePresentacion.Form1.resources
+F:\03. Desarrollos\AppAPU\CapaDePresentacion\obj\Debug\CapaDePresentacion.Properties.Resources.resources
+F:\03. Desarrollos\AppAPU\CapaDePresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+F:\03. Desarrollos\AppAPU\CapaDePresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+F:\03. Desarrollos\AppAPU\CapaDePresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
+F:\03. Desarrollos\AppAPU\CapaDePresentacion\obj\Debug\CapaDePresentacion.exe
+F:\03. Desarrollos\AppAPU\CapaDePresentacion\obj\Debug\CapaDePresentacion.pdb
+F:\03. Desarrollos\AppAPU\CapaDePresentacion\obj\Debug\CapaDePresentacion.Form2.resources
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaDePresentacion\bin\Debug\CapaDePresentacion.exe.config
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaDePresentacion\bin\Debug\CapaDePresentacion.exe
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaDePresentacion\bin\Debug\CapaDePresentacion.pdb
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaDePresentacion\bin\Debug\CapaLogicaDeNegocio.dll
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaDePresentacion\bin\Debug\CapaLogicaDeNegocio.pdb
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaDePresentacion\obj\Debug\CapaPresentacion.csprojAssemblyReference.cache
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaDePresentacion\obj\Debug\CapaDePresentacion.Form1.resources
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaDePresentacion\obj\Debug\CapaDePresentacion.Properties.Resources.resources
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaDePresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaDePresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaDePresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaDePresentacion\obj\Debug\CapaDePresentacion.exe
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaDePresentacion\obj\Debug\CapaDePresentacion.pdb
