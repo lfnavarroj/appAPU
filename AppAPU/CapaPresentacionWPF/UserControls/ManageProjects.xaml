@@ -3,15 +3,105 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:CapaPresentacionWPF"
              mc:Ignorable="d" 
              d:DesignHeight="520" d:DesignWidth="700">
     <Grid>
-        <Border Background="White"/>
-        <Label Content="Manage projects" 
+
+        <Label Content="Projects" 
                HorizontalAlignment="Left" 
                Margin="10,10,0,0" 
                VerticalAlignment="Top" 
-               Foreground="Black"/>
+               Foreground="White"/>
+
+        <ScrollViewer>
+            <Grid Height="400"
+                    Width="650"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    Margin="25,50,0,0">
+
+                <DataGrid x:Name="ProjectsDataGrid"
+                          ScrollViewer.CanContentScroll="True" 
+                          ScrollViewer.HorizontalScrollBarVisibility="Auto" 
+                          ScrollViewer.VerticalScrollBarVisibility="Auto"
+                          MinRowHeight="20"
+                          FontFamily="Candara Light"
+                          BorderBrush="White"
+                          BorderThickness="0.5,0.5,0.5,0.5"
+                          HorizontalGridLinesBrush="White" 
+                          VerticalGridLinesBrush="White"
+                          GridLinesVisibility="All">
+
+                    <DataGrid.Resources>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="BorderThickness" Value="0.5,0.5,0.5,0.5"/>
+                            <Setter Property="BorderBrush" Value="White"/>
+                        </Style>
+
+                        <Style TargetType="{x:Type DataGridCell}">
+                            <Setter Property="Padding" Value="0"/>
+                        </Style>
+                    </DataGrid.Resources>
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Project id" 
+                                            Binding="{Binding Id_proyecto}" 
+                                            Width="70"/>
+                        
+                        <DataGridTextColumn Header="Project name" 
+                                            Binding="{Binding Nombre_proyecto}" 
+                                            Width="200"/>
+                        
+                        <DataGridTextColumn Header="Project description" 
+                                            Binding="{Binding Descripcion_proyecto}"
+                                            MinWidth="500"/>
+                    </DataGrid.Columns>
+
+                </DataGrid>
+
+            </Grid>
+        </ScrollViewer>
+
+        <Button HorizontalAlignment="Left" 
+                Margin="25,470,0,0" 
+                VerticalAlignment="Top" 
+                Width="40" 
+                Padding="0"
+                Click="Button_Click">
+
+            <materialDesign:PackIcon Kind="CreateNewFolder"
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"/>
+             
+        </Button>
+
+        <Button HorizontalAlignment="Left" 
+                Margin="85,470,0,0" 
+                VerticalAlignment="Top" 
+                Width="40"
+                Padding="0">
+
+            <materialDesign:PackIcon Kind="FolderEdit"
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"/>
+
+        </Button>
+
+        <Button HorizontalAlignment="Left" 
+                Margin="145,470,0,0" 
+                VerticalAlignment="Top" 
+                Width="40"
+                Padding="0">
+
+            <materialDesign:PackIcon Kind="FolderRemove"
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"/>
+
+        </Button>
     </Grid>
 </UserControl>

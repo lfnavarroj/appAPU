@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CapaLogicaDeNegocio;
 
 namespace CapaPresentacionWPF
 {
@@ -23,6 +24,17 @@ namespace CapaPresentacionWPF
         public ManageProjects()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            clsProyectos proyecto1 = new clsProyectos();
+
+            proyecto1.Id_proyecto = 1;
+            proyecto1.Nombre_proyecto = "Proyecto de prueba";
+            proyecto1.Descripcion_proyecto = "Este proyecto fue creado para realizar una prueba sobre el datagrid de proyectos.";
+
+            ProjectsDataGrid.Items.Add(proyecto1);
         }
     }
 }
