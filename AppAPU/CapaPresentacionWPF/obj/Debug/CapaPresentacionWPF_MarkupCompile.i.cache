@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\App.xaml
-4737057352
+82039411576
 
-101075540790
+13-1583457294
 17-452363833
-ButtonTheme.xaml;LoginWindow.xaml;MainWindow.xaml;UserControlMenuItem.xaml;
+ButtonTheme.xaml;LoginWindow.xaml;MainWindow.xaml;UserControls\Help.xaml;UserControls\ManageProjects.xaml;UserControls\ManageResources.xaml;UserControls\ManageUsers.xaml;UserControls\Settings.xaml;
 
 True
 
