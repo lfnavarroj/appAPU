@@ -24,7 +24,6 @@ F:\03. Desarrollos\AppAPU\CapaDePresentacion\obj\Debug\CapaPresentacion.csproj.C
 F:\03. Desarrollos\AppAPU\CapaDePresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
 F:\03. Desarrollos\AppAPU\CapaDePresentacion\obj\Debug\CapaDePresentacion.exe
 F:\03. Desarrollos\AppAPU\CapaDePresentacion\obj\Debug\CapaDePresentacion.pdb
-F:\03. Desarrollos\AppAPU\CapaDePresentacion\obj\Debug\CapaDePresentacion.Form2.resources
 C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaDePresentacion\bin\Debug\CapaDePresentacion.exe.config
 C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaDePresentacion\bin\Debug\CapaDePresentacion.exe
 C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaDePresentacion\bin\Debug\CapaDePresentacion.pdb
