@@ -56,20 +56,10 @@
                            HorizontalAlignment="Center"/>
             </StackPanel>
 
-            <ScrollViewer HorizontalAlignment="Stretch" 
-                          HorizontalScrollBarVisibility="Disabled"
-                          VerticalScrollBarVisibility="Auto"
-                          Grid.Row="1">
-
-                <StackPanel x:Name="Menu" Margin="10"/>
-
-            </ScrollViewer>
-                          
-            <!--
-            <ListView Margin="0,30,0,0" x:Name="ListViewMenu">
+            <ListView x:Name="ListViewMenu" Margin="0,30,0,0" Grid.Row="1">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        
+
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="{Binding Path=Icon}" 
                                                      Width="15" Height="15"
@@ -81,12 +71,11 @@
                                        FontFamily="Candara Light"
                                        FontSize="16"/>
                         </StackPanel>
-                        
-                    </DataTemplate>                    
-                </ListView.ItemTemplate>              
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
-            -->
-            
+
         </Grid>
         
         <StackPanel Grid.Column="1">
@@ -129,7 +118,6 @@
 
             </StackPanel>
         </StackPanel>
-        
-        
+     
     </Grid>
 </Window>
