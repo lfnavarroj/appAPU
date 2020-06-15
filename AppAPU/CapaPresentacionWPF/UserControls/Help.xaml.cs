@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CapaPresentacionWPF
+namespace CapaPresentacionWPF.UserControls
 {
     /// <summary>
-    /// Lógica de interacción para Formulario1.xaml
+    /// Lógica de interacción para Help.xaml
     /// </summary>
-    public partial class Formulario1 : Window
+    public partial class Help : UserControl
     {
-        public Formulario1()
+        public Help()
         {
             InitializeComponent();
         }

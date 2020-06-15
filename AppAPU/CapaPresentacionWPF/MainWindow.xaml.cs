@@ -1,4 +1,5 @@
-﻿using MaterialDesignThemes.Wpf;
+﻿using CapaPresentacionWPF.UserControls;
+using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,6 +53,46 @@ namespace CapaPresentacionWPF
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            int index = ListViewMenu.SelectedIndex;
+
+            switch (index)
+            {
+                case 0:
+                    MainGrid.Children.Clear();
+                    MainGrid.Children.Add(new ManageProjects());
+                    break;
+
+                case 1:
+                    MainGrid.Children.Clear();
+                    MainGrid.Children.Add(new ManageResources());
+                    break;
+
+                case 2:
+                    MainGrid.Children.Clear();
+                    MainGrid.Children.Add(new ManageUsers());
+                    break;
+
+                case 3:
+                    MainGrid.Children.Clear();
+                    MainGrid.Children.Add(new Settings());
+                    break;
+
+                case 4:
+                    MainGrid.Children.Clear();
+                    MainGrid.Children.Add(new Help());
+                    break;
+
+                case 5:
+                    Close();
+                    break;
+
+                default:
+                    break;
+            }                
         }
     }
 }

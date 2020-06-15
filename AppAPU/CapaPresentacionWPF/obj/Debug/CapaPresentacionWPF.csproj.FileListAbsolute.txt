@@ -29,5 +29,13 @@ C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\bin\Debu
 C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\bin\Debug\MaterialDesignColors.pdb
 C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\bin\Debug\MaterialDesignThemes.Wpf.xml
-C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\Formulario1.g.cs
-C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\Formulario1.baml
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\UserControls\ManageProjects.g.cs
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\UserControls\ManageResources.g.cs
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\UserControls\ManageUsers.g.cs
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\UserControls\ManageProjects.baml
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\UserControls\ManageResources.baml
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\UserControls\ManageUsers.baml
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\UserControls\Help.g.cs
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\UserControls\Settings.g.cs
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\UserControls\Help.baml
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\UserControls\Settings.baml
