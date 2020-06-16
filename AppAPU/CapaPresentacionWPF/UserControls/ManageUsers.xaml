@@ -2,16 +2,131 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
              xmlns:local="clr-namespace:CapaPresentacionWPF"
              mc:Ignorable="d" 
              d:DesignHeight="520" d:DesignWidth="700">
     <Grid>
-        <Border Background="White"/>
-        <Label Content="Manage users" 
-               HorizontalAlignment="Left" 
-               Margin="10,10,0,0" 
-               VerticalAlignment="Top" 
-               Foreground="Black"/>
+        <Border Margin="12.5"
+                    BorderThickness="0.5,0.5,0,0"
+                    BorderBrush="White"
+                    CornerRadius="5"/>
+
+        <Label Content="Users" 
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top" 
+                   Margin="70,0,0,0"
+                   Foreground="White"
+                   Background="#FF1F4E79"
+                   FontFamily="Candara Light"
+                   FontSize="18"/>
+
+        <Button HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="25,30,0,30" 
+                    Width="30" 
+                    Height="25"
+                    Padding="0"
+                    BorderBrush="White"
+                    Style="{StaticResource MaterialDesignOutlinedButton}">
+
+            <materialDesign:PackIcon Kind="UserAdd"
+                                        HorizontalAlignment="Left"
+                                        VerticalAlignment="Center"
+                                        Height="15" Width="15"
+                                        Foreground="White"/>
+
+        </Button>
+
+        <Button HorizontalAlignment="Left"
+                    VerticalAlignment="Top" 
+                    Margin="25,65,0,30" 
+                    Width="30" 
+                    Height="25"
+                    Padding="0"
+                    BorderBrush="White"
+                    Style="{StaticResource MaterialDesignOutlinedButton}">
+
+            <materialDesign:PackIcon Kind="UserEdit"
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
+
+        </Button>
+
+        <Button HorizontalAlignment="Left" 
+                VerticalAlignment="Top"
+                Margin="25,100,0,30" 
+                Width="30" 
+                Height="25"
+                Padding="0"
+                BorderBrush="White"
+                Style="{StaticResource MaterialDesignOutlinedButton}">
+
+            <materialDesign:PackIcon Kind="UserRemove"
+                                     HorizontalAlignment="Left"
+                                     VerticalAlignment="Center"
+                                     Height="15" Width="15"
+                                     Foreground="White"/>
+
+        </Button>
+
+        <Grid Margin="70,30,25,20"
+              MinHeight="100">
+
+            <DataGrid x:Name="UsersDataGrid"
+                      ScrollViewer.CanContentScroll="True" 
+                      ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                      ScrollViewer.VerticalScrollBarVisibility="Auto"
+                      MinRowHeight="20"
+                      FontFamily="Candara Light"
+                      BorderBrush="White"
+                      BorderThickness="0.5,0.5,0.5,0.5"
+                      HorizontalGridLinesBrush="White" 
+                      VerticalGridLinesBrush="White"
+                      GridLinesVisibility="All">
+
+                <DataGrid.Resources>
+                    <Style TargetType="{x:Type DataGridColumnHeader}">
+                        <Setter Property="BorderThickness" Value="0.5,0.5,0.5,0.5"/>
+                        <Setter Property="BorderBrush" Value="White"/>
+                    </Style>
+
+                    <Style TargetType="{x:Type DataGridCell}">
+                        <Setter Property="Padding" Value="0"/>
+                    </Style>
+                </DataGrid.Resources>
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="USER ID"
+                                        Binding="{Binding Id_usuario}" 
+                                        Width="200"/>
+
+                    <DataGridTextColumn Header="NAME"
+                                        Binding="{Binding Nombre_usuario}" 
+                                        Width="200"/>
+
+                    <DataGridTextColumn Header="SURNAME"
+                                        Binding="{Binding Apellidos_usuario}" 
+                                        Width="200"/>
+
+                    <DataGridTextColumn Header="E-MAIL"
+                                        Binding="{Binding Correo_usuario}" 
+                                        Width="200"/>
+
+                    <DataGridTextColumn Header="TELEFONE"
+                                        Binding="{Binding Telefono_usuario}" 
+                                        Width="200"/>
+
+                    <DataGridTextColumn Header="PASSWORD"
+                                        Binding="{Binding Conraseña}" 
+                                        Width="235"/>
+                </DataGrid.Columns>
+
+            </DataGrid>
+
+        </Grid>
     </Grid>
 </UserControl>

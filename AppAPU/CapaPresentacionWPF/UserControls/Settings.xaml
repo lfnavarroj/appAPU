@@ -7,11 +7,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="520" d:DesignWidth="700">
     <Grid>
-        <Border Background="White"/>
         <Label Content="Settings" 
                HorizontalAlignment="Left" 
                Margin="10,10,0,0" 
                VerticalAlignment="Top" 
-               Foreground="Black"/>
+               Foreground="White"/>
     </Grid>
 </UserControl>
