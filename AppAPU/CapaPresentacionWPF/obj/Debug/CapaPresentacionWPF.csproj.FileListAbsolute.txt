@@ -41,5 +41,7 @@ C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debu
 C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\UserControls\Settings.baml
 C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\bin\Debug\CapaLogicaDeNegocio.dll
 C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\bin\Debug\CapaLogicaDeNegocio.pdb
-C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\UserWindow.g.cs
-C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\UserWindow.baml
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\AddUserWindow.g.cs
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\AddUserWindow.baml
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\EditUserWindow.g.cs
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\EditUserWindow.baml

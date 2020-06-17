@@ -28,14 +28,14 @@
                 BorderThickness="0.5,0.5,0,0"
                 BorderBrush="White"
                 CornerRadius="5"/>
-        
+
         <Border Grid.Row="2"
                 Grid.RowSpan="2"
                 Margin="42.5,12.5,12.5,12.5"
                 BorderThickness="0.5,0.5,0,0"
                 BorderBrush="White"
                 CornerRadius="5"/>
-        
+
         <Border Grid.Row="3"
                 Margin="57.5,12.5,12.5,12.5"
                 BorderThickness="0.5,0.5,0,0"
@@ -63,10 +63,10 @@
                     Style="{StaticResource MaterialDesignOutlinedButton}">
 
                 <materialDesign:PackIcon Kind="CreateNewFolder"
-                                        HorizontalAlignment="Left"
-                                        VerticalAlignment="Center"
-                                        Height="15" Width="15"
-                                        Foreground="White"/>
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
 
             </Button>
 
@@ -80,10 +80,10 @@
                     Style="{StaticResource MaterialDesignOutlinedButton}">
 
                 <materialDesign:PackIcon Kind="FolderEdit"
-                                        HorizontalAlignment="Left"
-                                        VerticalAlignment="Center"
-                                        Height="15" Width="15"
-                                        Foreground="White"/>
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
 
             </Button>
 
@@ -97,16 +97,16 @@
                     Style="{StaticResource MaterialDesignOutlinedButton}">
 
                 <materialDesign:PackIcon Kind="FolderRemove"
-                                        HorizontalAlignment="Left"
-                                        VerticalAlignment="Center"
-                                        Height="15" Width="15"
-                                        Foreground="White"/>
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
 
             </Button>
 
             <Grid Margin="70,30,25,20"
                   MinHeight="100">
-               
+
                 <DataGrid x:Name="ProjectsDataGrid"
                           ScrollViewer.CanContentScroll="True" 
                           ScrollViewer.HorizontalScrollBarVisibility="Auto"
@@ -170,10 +170,10 @@
                     Style="{StaticResource MaterialDesignOutlinedButton}">
 
                 <materialDesign:PackIcon Kind="CreateNewFolder"
-                                        HorizontalAlignment="Left"
-                                        VerticalAlignment="Center"
-                                        Height="15" Width="15"
-                                        Foreground="White"/>
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
 
             </Button>
 
@@ -187,10 +187,10 @@
                     Style="{StaticResource MaterialDesignOutlinedButton}">
 
                 <materialDesign:PackIcon Kind="FolderEdit"
-                                        HorizontalAlignment="Left"
-                                        VerticalAlignment="Center"
-                                        Height="15" Width="15"
-                                        Foreground="White"/>
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
 
             </Button>
 
@@ -204,10 +204,10 @@
                     Style="{StaticResource MaterialDesignOutlinedButton}">
 
                 <materialDesign:PackIcon Kind="FolderRemove"
-                                        HorizontalAlignment="Left"
-                                        VerticalAlignment="Center"
-                                        Height="15" Width="15"
-                                        Foreground="White"/>
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
 
             </Button>
 
@@ -248,7 +248,7 @@
                         <DataGridTextColumn Header="STATE" 
                                             Binding="{Binding Estado_del_presupuesto}"
                                             MinWidth="400"/>
-                        
+
                         <DataGridTextColumn Header="DATE" 
                                             Binding="{Binding Fecha_realizacion}"
                                             MinWidth="350"/>
@@ -281,10 +281,10 @@
                     Style="{StaticResource MaterialDesignOutlinedButton}">
 
                 <materialDesign:PackIcon Kind="CreateNewFolder"
-                                        HorizontalAlignment="Left"
-                                        VerticalAlignment="Center"
-                                        Height="15" Width="15"
-                                        Foreground="White"/>
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
 
             </Button>
 
@@ -298,10 +298,10 @@
                     Style="{StaticResource MaterialDesignOutlinedButton}">
 
                 <materialDesign:PackIcon Kind="FolderEdit"
-                                        HorizontalAlignment="Left"
-                                        VerticalAlignment="Center"
-                                        Height="15" Width="15"
-                                        Foreground="White"/>
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
 
             </Button>
 
@@ -315,10 +315,10 @@
                     Style="{StaticResource MaterialDesignOutlinedButton}">
 
                 <materialDesign:PackIcon Kind="FolderRemove"
-                                        HorizontalAlignment="Left"
-                                        VerticalAlignment="Center"
-                                        Height="15" Width="15"
-                                        Foreground="White"/>
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
 
             </Button>
 
@@ -389,10 +389,10 @@
                     Style="{StaticResource MaterialDesignOutlinedButton}">
 
                 <materialDesign:PackIcon Kind="CreateNewFolder"
-                                        HorizontalAlignment="Left"
-                                        VerticalAlignment="Center"
-                                        Height="15" Width="15"
-                                        Foreground="White"/>
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
 
             </Button>
 
@@ -406,10 +406,10 @@
                     Style="{StaticResource MaterialDesignOutlinedButton}">
 
                 <materialDesign:PackIcon Kind="FolderEdit"
-                                        HorizontalAlignment="Left"
-                                        VerticalAlignment="Center"
-                                        Height="15" Width="15"
-                                        Foreground="White"/>
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
 
             </Button>
 
@@ -423,10 +423,10 @@
                     Style="{StaticResource MaterialDesignOutlinedButton}">
 
                 <materialDesign:PackIcon Kind="FolderRemove"
-                                        HorizontalAlignment="Left"
-                                        VerticalAlignment="Center"
-                                        Height="15" Width="15"
-                                        Foreground="White"/>
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
 
             </Button>
 
@@ -467,7 +467,7 @@
                         <DataGridTextColumn Header="UNIT" 
                                             Binding="{Binding Unidad_medida_unitario}"
                                             MinWidth="420"/>
-                        
+
                     </DataGrid.Columns>
 
                 </DataGrid>

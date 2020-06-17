@@ -25,10 +25,28 @@ namespace CapaPresentacionWPF
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-            UserWindow userWindow = new UserWindow(this);
+            AddUserWindow userWindow = new AddUserWindow(this);
             userWindow.ShowDialog();
+        }
+
+        private void ButtonEdit_Click(object sender, RoutedEventArgs e)
+        {
+            if (UsersDataGrid.SelectedItem != null)
+            {
+                EditUserWindow userWindow = new EditUserWindow(this);
+                userWindow.ShowDialog();
+            }
+        }
+
+        private void ButtonRemove_Click(object sender, RoutedEventArgs e)
+        {
+            if (UsersDataGrid.SelectedItem != null)
+            {
+                if (MessageBox.Show("Do you want to remove this user?","",MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No) == MessageBoxResult.Yes)
+                    UsersDataGrid.Items.Remove(UsersDataGrid.SelectedItem);
+            }
         }
     }
 }

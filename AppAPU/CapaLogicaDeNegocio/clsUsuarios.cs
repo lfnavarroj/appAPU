@@ -14,6 +14,7 @@ namespace CapaLogicaDeNegocio
         private string _nombre_usuario;
         private string _apellidos_usuario;
         private string _contraseña;
+        private string _perfil;
 
         public string Correo_usuario { get => _correo_usuario; set => _correo_usuario = value; }
         public long Telefono_usuario { get => _telefono_usuario; set => _telefono_usuario = value; }
@@ -21,5 +22,6 @@ namespace CapaLogicaDeNegocio
         public string Nombre_usuario { get => _nombre_usuario; set => _nombre_usuario = value; }
         public string Apellidos_usuario { get => _apellidos_usuario; set => _apellidos_usuario = value; }
         public string Contraseña { get => _contraseña; set => _contraseña = value; }
+        public string Perfil { get => _perfil; set => _perfil = value; }
     }
 }
