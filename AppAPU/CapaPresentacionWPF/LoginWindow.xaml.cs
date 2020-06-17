@@ -35,18 +35,18 @@ namespace CapaPresentacionWPF
         {
             this.Hide();
             MainWindow mainWindow = new MainWindow();
-            mainWindow.ShowDialog();
-            Close();
+            mainWindow.Show();
+            this.Close();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Close();
+            this.Close();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            WindowState = WindowState.Minimized;
+            this.WindowState = WindowState.Minimized;
         }
     }
 }

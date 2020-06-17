@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaLogicaDeNegocio
 {
-    class clsHerramientas
+    public class clsHerramientas
     {
         private float _valor_uso_herramienta;
         private int _unidad_herramienta;

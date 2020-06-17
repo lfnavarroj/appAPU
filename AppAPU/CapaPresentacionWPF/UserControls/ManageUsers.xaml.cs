@@ -24,5 +24,11 @@ namespace CapaPresentacionWPF
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            UserWindow userWindow = new UserWindow(this);
+            userWindow.ShowDialog();
+        }
     }
 }

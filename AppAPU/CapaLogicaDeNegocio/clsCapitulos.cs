@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaLogicaDeNegocio
 {
-    class clsCapitulos
+    public class clsCapitulos
     {
         private string _id_capitulo;
         private string _descripcion_capitulo;

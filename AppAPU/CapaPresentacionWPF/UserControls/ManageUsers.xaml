@@ -29,7 +29,7 @@
                     Height="25"
                     Padding="0"
                     BorderBrush="White"
-                    Style="{StaticResource MaterialDesignOutlinedButton}">
+                    Style="{StaticResource MaterialDesignOutlinedButton}" Click="Button_Click">
 
             <materialDesign:PackIcon Kind="UserAdd"
                                         HorizontalAlignment="Left"
@@ -81,7 +81,6 @@
                       ScrollViewer.HorizontalScrollBarVisibility="Auto"
                       ScrollViewer.VerticalScrollBarVisibility="Auto"
                       MinRowHeight="20"
-                      FontFamily="Candara Light"
                       BorderBrush="White"
                       BorderThickness="0.5,0.5,0.5,0.5"
                       HorizontalGridLinesBrush="White" 
@@ -102,27 +101,31 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="USER ID"
                                         Binding="{Binding Id_usuario}" 
-                                        Width="200"/>
+                                        Width="180"/>
 
                     <DataGridTextColumn Header="NAME"
                                         Binding="{Binding Nombre_usuario}" 
-                                        Width="200"/>
+                                        Width="180"/>
 
                     <DataGridTextColumn Header="SURNAME"
                                         Binding="{Binding Apellidos_usuario}" 
-                                        Width="200"/>
+                                        Width="180"/>
 
                     <DataGridTextColumn Header="E-MAIL"
                                         Binding="{Binding Correo_usuario}" 
-                                        Width="200"/>
+                                        Width="180"/>
 
-                    <DataGridTextColumn Header="TELEFONE"
+                    <DataGridTextColumn Header="TELEPHONE"
                                         Binding="{Binding Telefono_usuario}" 
-                                        Width="200"/>
+                                        Width="180"/>
 
                     <DataGridTextColumn Header="PASSWORD"
                                         Binding="{Binding Conraseña}" 
-                                        Width="235"/>
+                                        Width="180"/>
+
+                    <DataGridTextColumn Header="PROFILE"
+                                        Binding="{Binding Conraseña}" 
+                                        Width="155"/>
                 </DataGrid.Columns>
 
             </DataGrid>

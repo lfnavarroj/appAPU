@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaLogicaDeNegocio
 {
-    class clsUnitarios
+    public class clsUnitarios
     {
         private int _id_unitario;
         private string _descripcion_unitario;

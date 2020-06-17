@@ -69,7 +69,7 @@ namespace CapaPresentacionWPF
 
         private void ButtonClose_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            this.Close();
         }
 
         private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -104,7 +104,7 @@ namespace CapaPresentacionWPF
                     break;
 
                 case 5:
-                    Close();
+                    this.Close();
                     break;
 
                 default:
