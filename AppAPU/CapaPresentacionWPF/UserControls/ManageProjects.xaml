@@ -104,6 +104,23 @@
 
             </Button>
 
+            <Button HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" 
+                    Margin="25,135,0,30" 
+                    Width="30" 
+                    Height="25"
+                    Padding="0"
+                    BorderBrush="White"
+                    Style="{StaticResource MaterialDesignOutlinedButton}">
+
+                <materialDesign:PackIcon Kind="FolderSearch"
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
+
+            </Button>
+
             <Grid Margin="70,30,25,20"
                   MinHeight="100">
 
@@ -111,7 +128,10 @@
                           ScrollViewer.CanContentScroll="True" 
                           ScrollViewer.HorizontalScrollBarVisibility="Auto"
                           ScrollViewer.VerticalScrollBarVisibility="Auto"
-                          MinRowHeight="20"
+                          CanUserResizeRows="True"
+                          CanUserResizeColumns="True"
+                          VerticalContentAlignment="Stretch"
+                          HorizontalContentAlignment="Stretch"
                           BorderBrush="White"
                           BorderThickness="0.5,0.5,0.5,0.5"
                           HorizontalGridLinesBrush="White" 
@@ -122,17 +142,18 @@
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="BorderThickness" Value="0.5,0.5,0.5,0.5"/>
                             <Setter Property="BorderBrush" Value="White"/>
+                            <Setter Property="Padding" Value="5,1,5,1"/>
                         </Style>
 
                         <Style TargetType="{x:Type DataGridCell}">
-                            <Setter Property="Padding" Value="0"/>
+                            <Setter Property="Padding" Value="5,1,5,1"/>
                         </Style>
                     </DataGrid.Resources>
 
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="PROJECT ID"
                                             Binding="{Binding Id_proyecto}" 
-                                            Width="70"/>
+                                            Width="100"/>
 
                         <DataGridTextColumn Header="NAME" 
                                             Binding="{Binding Nombre_proyecto}" 
@@ -140,7 +161,7 @@
 
                         <DataGridTextColumn Header="DESCRIPTION" 
                                             Binding="{Binding Descripcion_proyecto}"
-                                            MinWidth="865"/>
+                                            Width="835"/>
                     </DataGrid.Columns>
 
                 </DataGrid>
@@ -211,6 +232,23 @@
 
             </Button>
 
+            <Button HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" 
+                    Margin="40,135,0,30" 
+                    Width="30" 
+                    Height="25"
+                    Padding="0"
+                    BorderBrush="White"
+                    Style="{StaticResource MaterialDesignOutlinedButton}">
+
+                <materialDesign:PackIcon Kind="FolderSearch"
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
+
+            </Button>
+
             <Grid Margin="85,30,25,20"
                   MinHeight="100">
 
@@ -229,17 +267,18 @@
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="BorderThickness" Value="0.5,0.5,0.5,0.5"/>
                             <Setter Property="BorderBrush" Value="White"/>
+                            <Setter Property="Padding" Value="5,1,5,1"/>
                         </Style>
 
                         <Style TargetType="{x:Type DataGridCell}">
-                            <Setter Property="Padding" Value="0"/>
+                            <Setter Property="Padding" Value="5,1,5,1"/>
                         </Style>
                     </DataGrid.Resources>
 
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="BUDGET ID"
                                             Binding="{Binding Id_presupuesto}" 
-                                            Width="70"/>
+                                            Width="100"/>
 
                         <DataGridTextColumn Header="DESCRIPTION" 
                                             Binding="{Binding Descripcion_presupuesto}" 
@@ -247,11 +286,11 @@
 
                         <DataGridTextColumn Header="STATE" 
                                             Binding="{Binding Estado_del_presupuesto}"
-                                            MinWidth="400"/>
+                                            Width="400"/>
 
                         <DataGridTextColumn Header="DATE" 
                                             Binding="{Binding Fecha_realizacion}"
-                                            MinWidth="350"/>
+                                            Width="320"/>
                     </DataGrid.Columns>
 
                 </DataGrid>
@@ -322,6 +361,23 @@
 
             </Button>
 
+            <Button HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" 
+                    Margin="55,135,0,30" 
+                    Width="30" 
+                    Height="25"
+                    Padding="0"
+                    BorderBrush="White"
+                    Style="{StaticResource MaterialDesignOutlinedButton}">
+
+                <materialDesign:PackIcon Kind="FolderSearch"
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
+
+            </Button>
+
             <Grid Margin="100,30,25,20"
                   MinHeight="100">
                 <Grid.RowDefinitions>
@@ -334,6 +390,7 @@
                           ScrollViewer.HorizontalScrollBarVisibility="Auto"
                           ScrollViewer.VerticalScrollBarVisibility="Auto"
                           MinRowHeight="20"
+                          CanUserResizeRows="True"
                           BorderBrush="White"
                           BorderThickness="0.5,0.5,0.5,0.5"
                           HorizontalGridLinesBrush="White" 
@@ -344,21 +401,22 @@
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="BorderThickness" Value="0.5,0.5,0.5,0.5"/>
                             <Setter Property="BorderBrush" Value="White"/>
+                            <Setter Property="Padding" Value="5,1,5,1"/>
                         </Style>
 
                         <Style TargetType="{x:Type DataGridCell}">
-                            <Setter Property="Padding" Value="0"/>
+                            <Setter Property="Padding" Value="5,1,5,1"/>
                         </Style>
                     </DataGrid.Resources>
 
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="CHAPTER ID"
                                             Binding="{Binding Id_capitulo}" 
-                                            Width="70"/>
+                                            Width="100"/>
 
                         <DataGridTextColumn Header="DESCRIPTION" 
                                             Binding="{Binding Descripcion_capitulo}" 
-                                            Width="1135"/>
+                                            Width="1105"/>
 
                     </DataGrid.Columns>
 
@@ -430,6 +488,23 @@
 
             </Button>
 
+            <Button HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" 
+                    Margin="70,135,0,30" 
+                    Width="30" 
+                    Height="25"
+                    Padding="0"
+                    BorderBrush="White"
+                    Style="{StaticResource MaterialDesignOutlinedButton}">
+
+                <materialDesign:PackIcon Kind="FolderSearch"
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
+
+            </Button>
+
             <Grid Margin="115,30,25,20"
                   MinHeight="100">
 
@@ -448,17 +523,18 @@
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="BorderThickness" Value="0.5,0.5,0.5,0.5"/>
                             <Setter Property="BorderBrush" Value="White"/>
+                            <Setter Property="Padding" Value="5,1,5,1"/>
                         </Style>
 
                         <Style TargetType="{x:Type DataGridCell}">
-                            <Setter Property="Padding" Value="0"/>
+                            <Setter Property="Padding" Value="5,1,5,1"/>
                         </Style>
                     </DataGrid.Resources>
 
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="ITEM ID"
                                             Binding="{Binding Id_unitario}" 
-                                            Width="70"/>
+                                            Width="100"/>
 
                         <DataGridTextColumn Header="DESCRIPTION" 
                                             Binding="{Binding Descripcion_unitario}" 
@@ -466,7 +542,7 @@
 
                         <DataGridTextColumn Header="UNIT" 
                                             Binding="{Binding Unidad_medida_unitario}"
-                                            MinWidth="420"/>
+                                            Width="390"/>
 
                     </DataGrid.Columns>
 

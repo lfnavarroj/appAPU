@@ -69,8 +69,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="EditUserWindow.xaml.cs">
-      <DependentUpon>EditUserWindow.xaml</DependentUpon>
+    <Compile Include="Add_Edit_Windows\EquipmentWindow.xaml.cs">
+      <DependentUpon>EquipmentWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Add_Edit_Windows\MaterialWindow.xaml.cs">
+      <DependentUpon>MaterialWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Add_Edit_Windows\ServiceWindow.xaml.cs">
+      <DependentUpon>ServiceWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Add_Edit_Windows\ToolWindow.xaml.cs">
+      <DependentUpon>ToolWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Help.xaml.cs">
       <DependentUpon>Help.xaml</DependentUpon>
@@ -78,9 +87,25 @@
     <Compile Include="UserControls\Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AddUserWindow.xaml.cs">
-      <DependentUpon>AddUserWindow.xaml</DependentUpon>
+    <Compile Include="Add_Edit_Windows\UserWindow.xaml.cs">
+      <DependentUpon>UserWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Add_Edit_Windows\EquipmentWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Add_Edit_Windows\MaterialWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Add_Edit_Windows\ServiceWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Add_Edit_Windows\ToolWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ButtonTheme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -98,10 +123,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MainWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="EditUserWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -125,7 +146,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AddUserWindow.xaml">
+    <Page Include="Add_Edit_Windows\UserWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

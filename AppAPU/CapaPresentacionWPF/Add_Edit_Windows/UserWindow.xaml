@@ -1,4 +1,4 @@
-﻿<Window x:Class="CapaPresentacionWPF.EditUserWindow"
+﻿<Window x:Class="CapaPresentacionWPF.UserWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,7 +6,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:CapaPresentacionWPF"
         mc:Ignorable="d"
-        Title="EditUserWindow" Height="240" Width="400"
+        Title="UserWindow" Height="240" Width="400"
         AllowsTransparency="True" Background="Transparent"
         WindowStyle="None" ResizeMode="NoResize"
         MouseDown="Window_MouseDown"
@@ -41,7 +41,7 @@
                     VerticalAlignment="Top"
                     HorizontalAlignment="Left"
                     Orientation="Horizontal">
-
+            
             <TextBlock Text="ELECTRICAL" 
                        FontFamily="Candida Light" 
                        FontSize="14.5"
@@ -72,14 +72,15 @@
                     BorderBrush="White"
                     CornerRadius="5"/>
 
-            <Label Content="Edit user" 
+            <Label x:Name="titleLabel" 
+                   Content="Add user" 
                    HorizontalAlignment="Left"
                    VerticalAlignment="Top" 
                    Margin="25,10,0,0"
                    Foreground="White"
                    FontFamily="Candara Light"
                    FontSize="18"/>
-
+            
             <StackPanel Margin="30,50,0,0"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Left">
@@ -92,10 +93,10 @@
 
                 <TextBox x:Name="id_TB" 
                          Width="100" 
-                         IsReadOnly="True"
+                         Background="#FF353535"
                          BorderBrush="White"
                          BorderThickness="0.5"
-                         Foreground="Black"   
+                         Foreground="White"   
                          FontFamily="Candida Light"/>
 
             </StackPanel>
@@ -111,10 +112,10 @@
                            HorizontalAlignment="Left"/>
 
                 <TextBox x:Name="name_TB" Width="100" 
-                         IsReadOnly="True"
+                         Background="#FF353535"
                          BorderBrush="White"
                          BorderThickness="0.5"
-                         Foreground="Black"   
+                         Foreground="White"   
                          FontFamily="Candida Light"/>
 
             </StackPanel>
@@ -130,11 +131,11 @@
                            HorizontalAlignment="Left"/>
 
                 <TextBox x:Name="surname_TB" 
-                         IsReadOnly="True"
                          Width="100" 
+                         Background="#FF353535"
                          BorderBrush="White"
                          BorderThickness="0.5"
-                         Foreground="Black"   
+                         Foreground="White"   
                          FontFamily="Candida Light"/>
 
             </StackPanel>
@@ -189,12 +190,12 @@
                            Foreground="White"
                            HorizontalAlignment="Left"/>
 
-                <PasswordBox x:Name="password_TB" 
-                             Width="100"
-                             Background="#FF353535"
-                             BorderBrush="White"
-                             BorderThickness="0.5"
-                             Foreground="White"/>
+                <PasswordBox x:Name="password_TB"
+                         Width="100"
+                         Background="#FF353535"
+                         BorderBrush="White"
+                         BorderThickness="0.5"
+                         Foreground="White"/>
 
             </StackPanel>
 
@@ -208,17 +209,16 @@
                            Foreground="White"
                            HorizontalAlignment="Left"/>
 
-                <ComboBox x:Name="profile_CB"
-                          IsEnabled="False"
-                          IsReadOnly="True"
+                <ComboBox x:Name="profile_CB" 
                           Width="100"
+                          Background="#FF353535"
                           BorderBrush="White"
                           BorderThickness="0.5"
-                          Foreground="Black"   
+                          Foreground="White"   
                           FontFamily="Candida Light">
-
-                    <ComboBoxItem Content=" Administrator"/>
-                    <ComboBoxItem Content=" Engineer"
+                    
+                    <ComboBoxItem Content="Administrator"/>
+                    <ComboBoxItem Content="Engineer"
                                   Selector.IsSelected="True"/>
                 </ComboBox>
 
@@ -231,7 +231,7 @@
 
                 <Button HorizontalAlignment="Left"
                         VerticalAlignment="Top"
-                        Width="30"
+                        Width="28"
                         Height="25"
                         Padding="0"
                         BorderBrush="White"
@@ -248,8 +248,26 @@
 
                 <Button HorizontalAlignment="Left"
                         VerticalAlignment="Top"
-                        Margin="15,0,0,0" 
-                        Width="30"
+                        Margin="8,0,0,0" 
+                        Width="28"
+                        Height="25"
+                        Padding="0"
+                        BorderBrush="White"
+                        Style="{StaticResource MaterialDesignOutlinedButton}"
+                        Click="ButtonRefresh_Click">
+
+                    <materialDesign:PackIcon Kind="Refresh"
+                                             HorizontalAlignment="Left"
+                                             VerticalAlignment="Center"
+                                             Height="15" Width="15"
+                                             Foreground="White"/>
+
+                </Button>
+
+                <Button HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Margin="8,0,0,0" 
+                        Width="28"
                         Height="25"
                         Padding="0"
                         BorderBrush="White"
@@ -265,8 +283,8 @@
                 </Button>
 
             </StackPanel>
-
+                       
         </Grid>
-
+        
     </Grid>
 </Window>

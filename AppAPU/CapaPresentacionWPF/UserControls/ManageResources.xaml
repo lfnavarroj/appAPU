@@ -40,7 +40,8 @@
                     Height="25"
                     Padding="0"
                     BorderBrush="White"
-                    Style="{StaticResource MaterialDesignOutlinedButton}">
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonAddMaterial_Click">
 
                 <materialDesign:PackIcon Kind="DatabaseAdd"
                                         HorizontalAlignment="Left"
@@ -57,7 +58,8 @@
                     Height="25"
                     Padding="0"
                     BorderBrush="White"
-                    Style="{StaticResource MaterialDesignOutlinedButton}">
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonEditMaterial_Click">
 
                 <materialDesign:PackIcon Kind="DatabaseEdit"
                                          HorizontalAlignment="Left"
@@ -74,9 +76,27 @@
                     Height="25"
                     Padding="0"
                     BorderBrush="White"
-                    Style="{StaticResource MaterialDesignOutlinedButton}">
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonRemoveMaterial_Click">
 
                 <materialDesign:PackIcon Kind="DatabaseRemove"
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
+
+            </Button>
+
+            <Button HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" 
+                    Margin="25,135,0,30" 
+                    Width="30" 
+                    Height="25"
+                    Padding="0"
+                    BorderBrush="White"
+                    Style="{StaticResource MaterialDesignOutlinedButton}">
+
+                <materialDesign:PackIcon Kind="DatabaseSearch"
                                          HorizontalAlignment="Left"
                                          VerticalAlignment="Center"
                                          Height="15" Width="15"
@@ -102,25 +122,26 @@
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="BorderThickness" Value="0.5,0.5,0.5,0.5"/>
                             <Setter Property="BorderBrush" Value="White"/>
+                            <Setter Property="Padding" Value="5,1,5,1"/>
                         </Style>
 
                         <Style TargetType="{x:Type DataGridCell}">
-                            <Setter Property="Padding" Value="0"/>
+                            <Setter Property="Padding" Value="5,1,5,1"/>
                         </Style>
                     </DataGrid.Resources>
 
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="MATERIAL CODE"
                                             Binding="{Binding Cod_material}" 
-                                            Width="100"/>
+                                            Width="120"/>
 
                         <DataGridTextColumn Header="NAME" 
                                             Binding="{Binding Nombre_material}" 
                                             Width="310"/>
 
-                        <DataGridTextColumn Header="PRICE" 
+                        <DataGridTextColumn Header="VALUE" 
                                             Binding="{Binding Precio_material}"
-                                            MinWidth="150"/>
+                                            Width="130"/>
                     </DataGrid.Columns>
 
                 </DataGrid>
@@ -151,13 +172,14 @@
                     Height="25"
                     Padding="0"
                     BorderBrush="White"
-                    Style="{StaticResource MaterialDesignOutlinedButton}">
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonAddService_Click">
 
                 <materialDesign:PackIcon Kind="DatabaseAdd"
-                                        HorizontalAlignment="Left"
-                                        VerticalAlignment="Center"
-                                        Height="15" Width="15"
-                                        Foreground="White"/>
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
 
             </Button>
 
@@ -168,7 +190,8 @@
                     Height="25"
                     Padding="0"
                     BorderBrush="White"
-                    Style="{StaticResource MaterialDesignOutlinedButton}">
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonEditService_Click">
 
                 <materialDesign:PackIcon Kind="DatabaseEdit"
                                          HorizontalAlignment="Left"
@@ -185,9 +208,27 @@
                     Height="25"
                     Padding="0"
                     BorderBrush="White"
-                    Style="{StaticResource MaterialDesignOutlinedButton}">
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonRemoveService_Click">
 
                 <materialDesign:PackIcon Kind="DatabaseRemove"
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
+
+            </Button>
+
+            <Button HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" 
+                    Margin="25,135,0,30" 
+                    Width="30" 
+                    Height="25"
+                    Padding="0"
+                    BorderBrush="White"
+                    Style="{StaticResource MaterialDesignOutlinedButton}">
+
+                <materialDesign:PackIcon Kind="DatabaseSearch"
                                          HorizontalAlignment="Left"
                                          VerticalAlignment="Center"
                                          Height="15" Width="15"
@@ -213,17 +254,18 @@
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="BorderThickness" Value="0.5,0.5,0.5,0.5"/>
                             <Setter Property="BorderBrush" Value="White"/>
+                            <Setter Property="Padding" Value="5,1,5,1"/>
                         </Style>
 
                         <Style TargetType="{x:Type DataGridCell}">
-                            <Setter Property="Padding" Value="0"/>
+                            <Setter Property="Padding" Value="5,1,5,1"/>
                         </Style>
                     </DataGrid.Resources>
 
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="SERVICE CODE"
                                             Binding="{Binding Codigo_prestacion}" 
-                                            Width="100"/>
+                                            Width="120"/>
 
                         <DataGridTextColumn Header="DESCRIPTION" 
                                             Binding="{Binding Descripcion_prestacion}" 
@@ -231,11 +273,11 @@
 
                         <DataGridTextColumn Header="UNIT" 
                                             Binding="{Binding Unidad_prestacion}"
-                                            MinWidth="150"/>
+                                            Width="150"/>
 
-                        <DataGridTextColumn Header="PRICE" 
+                        <DataGridTextColumn Header="VALUE" 
                                             Binding="{Binding Valor_prestacion}"
-                                            MinWidth="150"/>
+                                            Width="130"/>
                     </DataGrid.Columns>
 
                 </DataGrid>
@@ -266,7 +308,8 @@
                     Height="25"
                     Padding="0"
                     BorderBrush="White"
-                    Style="{StaticResource MaterialDesignOutlinedButton}">
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonAddEquipment_Click">
 
                 <materialDesign:PackIcon Kind="DatabaseAdd"
                                         HorizontalAlignment="Left"
@@ -283,7 +326,8 @@
                     Height="25"
                     Padding="0"
                     BorderBrush="White"
-                    Style="{StaticResource MaterialDesignOutlinedButton}">
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonEditEquipment_Click">
 
                 <materialDesign:PackIcon Kind="DatabaseEdit"
                                          HorizontalAlignment="Left"
@@ -300,9 +344,27 @@
                     Height="25"
                     Padding="0"
                     BorderBrush="White"
-                    Style="{StaticResource MaterialDesignOutlinedButton}">
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonRemoveEquipment_Click">
 
                 <materialDesign:PackIcon Kind="DatabaseRemove"
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
+
+            </Button>
+
+            <Button HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" 
+                    Margin="25,135,0,30" 
+                    Width="30" 
+                    Height="25"
+                    Padding="0"
+                    BorderBrush="White"
+                    Style="{StaticResource MaterialDesignOutlinedButton}">
+
+                <materialDesign:PackIcon Kind="DatabaseSearch"
                                          HorizontalAlignment="Left"
                                          VerticalAlignment="Center"
                                          Height="15" Width="15"
@@ -328,17 +390,18 @@
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="BorderThickness" Value="0.5,0.5,0.5,0.5"/>
                             <Setter Property="BorderBrush" Value="White"/>
+                            <Setter Property="Padding" Value="5,1,5,1"/>
                         </Style>
 
                         <Style TargetType="{x:Type DataGridCell}">
-                            <Setter Property="Padding" Value="0"/>
+                            <Setter Property="Padding" Value="5,1,5,1"/>
                         </Style>
                     </DataGrid.Resources>
 
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="SERIAL NUMBER"
                                             Binding="{Binding Numero_de_serie}" 
-                                            Width="100"/>
+                                            Width="120"/>
 
                         <DataGridTextColumn Header="DESCRIPTION" 
                                             Binding="{Binding Descripcion_equipo}" 
@@ -348,9 +411,9 @@
                                             Binding="{Binding Unidad_equipo}" 
                                             Width="150"/>
 
-                        <DataGridTextColumn Header="PRICE" 
+                        <DataGridTextColumn Header="VALUE" 
                                             Binding="{Binding Valor_uso_equipo}"
-                                            MinWidth="150"/>
+                                            Width="130"/>
                     </DataGrid.Columns>
 
                 </DataGrid>
@@ -381,7 +444,8 @@
                     Height="25"
                     Padding="0"
                     BorderBrush="White"
-                    Style="{StaticResource MaterialDesignOutlinedButton}">
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonAddTool_Click">
 
                 <materialDesign:PackIcon Kind="DatabaseAdd"
                                         HorizontalAlignment="Left"
@@ -398,7 +462,8 @@
                     Height="25"
                     Padding="0"
                     BorderBrush="White"
-                    Style="{StaticResource MaterialDesignOutlinedButton}">
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonEditTool_Click">
 
                 <materialDesign:PackIcon Kind="DatabaseEdit"
                                          HorizontalAlignment="Left"
@@ -415,9 +480,27 @@
                     Height="25"
                     Padding="0"
                     BorderBrush="White"
-                    Style="{StaticResource MaterialDesignOutlinedButton}">
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonRemoveTool_Click">
 
                 <materialDesign:PackIcon Kind="DatabaseRemove"
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
+
+            </Button>
+
+            <Button HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" 
+                    Margin="25,135,0,30" 
+                    Width="30" 
+                    Height="25"
+                    Padding="0"
+                    BorderBrush="White"
+                    Style="{StaticResource MaterialDesignOutlinedButton}">
+
+                <materialDesign:PackIcon Kind="DatabaseSearch"
                                          HorizontalAlignment="Left"
                                          VerticalAlignment="Center"
                                          Height="15" Width="15"
@@ -443,17 +526,18 @@
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="BorderThickness" Value="0.5,0.5,0.5,0.5"/>
                             <Setter Property="BorderBrush" Value="White"/>
+                            <Setter Property="Padding" Value="5,1,5,1"/>
                         </Style>
 
                         <Style TargetType="{x:Type DataGridCell}">
-                            <Setter Property="Padding" Value="0"/>
+                            <Setter Property="Padding" Value="5,1,5,1"/>
                         </Style>
                     </DataGrid.Resources>
 
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="TOOL CODE"
                                             Binding="{Binding Codigo_herramienta}" 
-                                            Width="100"/>
+                                            Width="120"/>
 
                         <DataGridTextColumn Header="DESCRIPTION" 
                                             Binding="{Binding Descripcion_herramienta}" 
@@ -463,9 +547,9 @@
                                             Binding="{Binding Unidad_herramienta}" 
                                             Width="150"/>
 
-                        <DataGridTextColumn Header="PRICE" 
+                        <DataGridTextColumn Header="VALUE" 
                                             Binding="{Binding Valor_uso_herramienta}"
-                                            MinWidth="150"/>
+                                            Width="130"/>
                     </DataGrid.Columns>
 
                 </DataGrid>

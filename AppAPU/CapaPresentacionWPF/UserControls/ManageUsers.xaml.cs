@@ -18,34 +18,38 @@ namespace CapaPresentacionWPF
     /// <summary>
     /// Lógica de interacción para ManageUsers.xaml
     /// </summary>
-    public partial class ManageUsers : UserControl
+    public partial class ManageMaterials : UserControl
     {
-        public ManageUsers()
+        bool edit;
+
+        public ManageMaterials()
         {
             InitializeComponent();
         }
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-            AddUserWindow userWindow = new AddUserWindow(this);
+            edit = false;
+            UserWindow userWindow = new UserWindow(this, edit);
             userWindow.ShowDialog();
         }
 
         private void ButtonEdit_Click(object sender, RoutedEventArgs e)
         {
-            if (UsersDataGrid.SelectedItem != null)
+            if (MaterialsDataGrid.SelectedItem != null)
             {
-                EditUserWindow userWindow = new EditUserWindow(this);
+                edit = true;
+                UserWindow userWindow = new UserWindow(this, edit);
                 userWindow.ShowDialog();
             }
         }
 
         private void ButtonRemove_Click(object sender, RoutedEventArgs e)
         {
-            if (UsersDataGrid.SelectedItem != null)
+            if (MaterialsDataGrid.SelectedItem != null)
             {
                 if (MessageBox.Show("Do you want to remove this user?","",MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No) == MessageBoxResult.Yes)
-                    UsersDataGrid.Items.Remove(UsersDataGrid.SelectedItem);
+                    MaterialsDataGrid.Items.Remove(MaterialsDataGrid.SelectedItem);
             }
         }
     }

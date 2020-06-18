@@ -90,7 +90,7 @@ namespace CapaPresentacionWPF
 
                 case 2:
                     MainGrid.Children.Clear();
-                    MainGrid.Children.Add(new ManageUsers());
+                    MainGrid.Children.Add(new ManageMaterials());
                     break;
 
                 case 3:
