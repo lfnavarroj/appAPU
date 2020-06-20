@@ -29,44 +29,25 @@ C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\bin\Debu
 C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\bin\Debug\MaterialDesignColors.pdb
 C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\bin\Debug\MaterialDesignThemes.Wpf.xml
-C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\UserControlMenuItem.g.cs
-C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\UserControlMenuItem.baml
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\bin\Debug\CapaPresentacionWPF.exe.config
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\bin\Debug\CapaPresentacionWPF.exe
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\bin\Debug\CapaPresentacionWPF.pdb
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\bin\Debug\CapaLogicaDeNegocio.dll
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\bin\Debug\MahApps.Metro.IconPacks.Core.dll
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\bin\Debug\MahApps.Metro.IconPacks.Material.dll
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\bin\Debug\MaterialDesignColors.dll
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\bin\Debug\MaterialDesignThemes.Wpf.dll
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\bin\Debug\CapaDeDatos.dll
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\bin\Debug\CapaLogicaDeNegocio.pdb
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\bin\Debug\MahApps.Metro.IconPacks.Core.pdb
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\bin\Debug\MahApps.Metro.IconPacks.Core.xml
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\bin\Debug\MahApps.Metro.IconPacks.Material.pdb
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\bin\Debug\MahApps.Metro.IconPacks.Material.xml
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\bin\Debug\MaterialDesignColors.pdb
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\bin\Debug\MaterialDesignThemes.Wpf.pdb
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\bin\Debug\MaterialDesignThemes.Wpf.xml
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\bin\Debug\CapaDeDatos.pdb
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\obj\Debug\CapaPresentacionWPF.csprojAssemblyReference.cache
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\obj\Debug\ButtonTheme.baml
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\obj\Debug\Formulario1.g.cs
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\obj\Debug\LoginWindow.g.cs
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\obj\Debug\MainWindow.g.cs
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\obj\Debug\UserControlMenuItem.g.cs
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\obj\Debug\App.g.cs
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\obj\Debug\CapaPresentacionWPF_MarkupCompile.cache
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\obj\Debug\CapaPresentacionWPF_MarkupCompile.lref
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\obj\Debug\App.baml
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\obj\Debug\Formulario1.baml
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\obj\Debug\LoginWindow.baml
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\obj\Debug\MainWindow.baml
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\obj\Debug\UserControlMenuItem.baml
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\obj\Debug\CapaPresentacionWPF.g.resources
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\obj\Debug\CapaPresentacionWPF.Properties.Resources.resources
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\obj\Debug\CapaPresentacionWPF.csproj.GenerateResource.cache
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\obj\Debug\CapaPresentacionWPF.csproj.CoreCompileInputs.cache
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\obj\Debug\CapaPresentacionWPF.csproj.CopyComplete
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\obj\Debug\CapaPresentacionWPF.exe
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\obj\Debug\CapaPresentacionWPF.pdb
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\UserControls\ManageProjects.g.cs
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\UserControls\ManageResources.g.cs
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\UserControls\ManageUsers.g.cs
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\UserControls\ManageProjects.baml
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\UserControls\ManageResources.baml
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\UserControls\ManageUsers.baml
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\UserControls\Help.g.cs
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\UserControls\Settings.g.cs
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\UserControls\Help.baml
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\UserControls\Settings.baml
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\bin\Debug\CapaLogicaDeNegocio.dll
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\bin\Debug\CapaLogicaDeNegocio.pdb
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\Add_Edit_Windows\UserWindow.g.cs
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\Add_Edit_Windows\UserWindow.baml
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\Add_Edit_Windows\MaterialWindow.g.cs
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\Add_Edit_Windows\MaterialWindow.baml
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\Add_Edit_Windows\EquipmentWindow.g.cs
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\Add_Edit_Windows\ServiceWindow.g.cs
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\Add_Edit_Windows\ToolWindow.g.cs
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\Add_Edit_Windows\EquipmentWindow.baml
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\Add_Edit_Windows\ServiceWindow.baml
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\Add_Edit_Windows\ToolWindow.baml

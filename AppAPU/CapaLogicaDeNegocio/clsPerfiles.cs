@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaLogicaDeNegocio
 {
-    class clsPerfiles
+    public class clsPerfiles
     {
         private string _id_perfil;
         private string _nombre_perfil;

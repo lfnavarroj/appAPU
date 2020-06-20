@@ -13,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CapaPresentacionWPF
+namespace CapaPresentacionWPF.UserControls
 {
     /// <summary>
-    /// Lógica de interacción para UserControlMenuItem.xaml
+    /// Lógica de interacción para Help.xaml
     /// </summary>
-    public partial class UserControlMenuItem : UserControl
+    public partial class Help : UserControl
     {
-        public UserControlMenuItem(MenuItem menuItem)
+        public Help()
         {
             InitializeComponent();
-
-            ExpanderMenu.Visibility = menuItem.MenuSubitems == null ? Visibility.Collapsed : Visibility.Visible;
-            ListViewItemMenu.Visibility = menuItem.MenuSubitems == null ? Visibility.Visible : Visibility.Collapsed;
-
-            this.DataContext = menuItem;
         }
     }
 }

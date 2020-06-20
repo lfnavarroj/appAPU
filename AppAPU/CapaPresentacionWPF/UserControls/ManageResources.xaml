@@ -1,0 +1,562 @@
+﻿<UserControl x:Class="CapaPresentacionWPF.ManageResources"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:CapaPresentacionWPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="520" d:DesignWidth="700">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Border Margin="12.5"
+                    BorderThickness="0.5,0.5,0,0"
+                    BorderBrush="White"
+                    CornerRadius="5"/>
+            
+            <Label Content="Materials" 
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top" 
+                   Margin="70,0,0,0"
+                   Foreground="White"
+                   Background="#FF1F4E79"
+                   FontFamily="Candara Light"
+                   FontSize="18"/>
+
+            <Button HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="25,30,0,30" 
+                    Width="30" 
+                    Height="25"
+                    Padding="0"
+                    BorderBrush="White"
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonAddMaterial_Click">
+
+                <materialDesign:PackIcon Kind="DatabaseAdd"
+                                        HorizontalAlignment="Left"
+                                        VerticalAlignment="Center"
+                                        Height="15" Width="15"
+                                        Foreground="White"/>
+
+            </Button>
+
+            <Button HorizontalAlignment="Left"
+                    VerticalAlignment="Top" 
+                    Margin="25,65,0,30" 
+                    Width="30" 
+                    Height="25"
+                    Padding="0"
+                    BorderBrush="White"
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonEditMaterial_Click">
+
+                <materialDesign:PackIcon Kind="DatabaseEdit"
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
+
+            </Button>
+
+            <Button HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" 
+                    Margin="25,100,0,30" 
+                    Width="30" 
+                    Height="25"
+                    Padding="0"
+                    BorderBrush="White"
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonRemoveMaterial_Click">
+
+                <materialDesign:PackIcon Kind="DatabaseRemove"
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
+
+            </Button>
+
+            <Button HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" 
+                    Margin="25,135,0,30" 
+                    Width="30" 
+                    Height="25"
+                    Padding="0"
+                    BorderBrush="White"
+                    Style="{StaticResource MaterialDesignOutlinedButton}">
+
+                <materialDesign:PackIcon Kind="DatabaseSearch"
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
+
+            </Button>
+
+            <Grid Margin="70,30,25,20"
+                  MinHeight="100">
+
+                <DataGrid x:Name="MaterialsDataGrid"
+                          ScrollViewer.CanContentScroll="True" 
+                          ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                          ScrollViewer.VerticalScrollBarVisibility="Auto"
+                          MinRowHeight="20"
+                          BorderBrush="White"
+                          BorderThickness="0.5,0.5,0.5,0.5"
+                          HorizontalGridLinesBrush="White" 
+                          VerticalGridLinesBrush="White"
+                          GridLinesVisibility="All" Grid.ColumnSpan="2">
+
+                    <DataGrid.Resources>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="BorderThickness" Value="0.5,0.5,0.5,0.5"/>
+                            <Setter Property="BorderBrush" Value="White"/>
+                            <Setter Property="Padding" Value="5,1,5,1"/>
+                        </Style>
+
+                        <Style TargetType="{x:Type DataGridCell}">
+                            <Setter Property="Padding" Value="5,1,5,1"/>
+                        </Style>
+                    </DataGrid.Resources>
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="MATERIAL CODE"
+                                            Binding="{Binding Cod_material}" 
+                                            Width="120"/>
+
+                        <DataGridTextColumn Header="NAME" 
+                                            Binding="{Binding Nombre_material}" 
+                                            Width="310"/>
+
+                        <DataGridTextColumn Header="VALUE" 
+                                            Binding="{Binding Precio_material}"
+                                            Width="130"/>
+                    </DataGrid.Columns>
+
+                </DataGrid>
+
+            </Grid>
+
+        </Grid>
+
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Border Margin="12.5"
+                    BorderThickness="0.5,0.5,0,0"
+                    BorderBrush="White"
+                    CornerRadius="5"/>
+
+            <Label Content="Services" 
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top" 
+                   Margin="70,0,0,0"
+                   Foreground="White"
+                   Background="#FF1F4E79"
+                   FontFamily="Candara Light"
+                   FontSize="18"/>
+
+            <Button HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="25,30,0,30" 
+                    Width="30" 
+                    Height="25"
+                    Padding="0"
+                    BorderBrush="White"
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonAddService_Click">
+
+                <materialDesign:PackIcon Kind="DatabaseAdd"
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
+
+            </Button>
+
+            <Button HorizontalAlignment="Left"
+                    VerticalAlignment="Top" 
+                    Margin="25,65,0,30" 
+                    Width="30" 
+                    Height="25"
+                    Padding="0"
+                    BorderBrush="White"
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonEditService_Click">
+
+                <materialDesign:PackIcon Kind="DatabaseEdit"
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
+
+            </Button>
+
+            <Button HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" 
+                    Margin="25,100,0,30" 
+                    Width="30" 
+                    Height="25"
+                    Padding="0"
+                    BorderBrush="White"
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonRemoveService_Click">
+
+                <materialDesign:PackIcon Kind="DatabaseRemove"
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
+
+            </Button>
+
+            <Button HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" 
+                    Margin="25,135,0,30" 
+                    Width="30" 
+                    Height="25"
+                    Padding="0"
+                    BorderBrush="White"
+                    Style="{StaticResource MaterialDesignOutlinedButton}">
+
+                <materialDesign:PackIcon Kind="DatabaseSearch"
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
+
+            </Button>
+
+            <Grid Margin="70,30,25,20"
+                  MinHeight="100">
+
+                <DataGrid x:Name="ServicesDataGrid"
+                          ScrollViewer.CanContentScroll="True" 
+                          ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                          ScrollViewer.VerticalScrollBarVisibility="Auto"
+                          MinRowHeight="20"
+                          BorderBrush="White"
+                          BorderThickness="0.5,0.5,0.5,0.5"
+                          HorizontalGridLinesBrush="White" 
+                          VerticalGridLinesBrush="White"
+                          GridLinesVisibility="All" Grid.ColumnSpan="2">
+
+                    <DataGrid.Resources>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="BorderThickness" Value="0.5,0.5,0.5,0.5"/>
+                            <Setter Property="BorderBrush" Value="White"/>
+                            <Setter Property="Padding" Value="5,1,5,1"/>
+                        </Style>
+
+                        <Style TargetType="{x:Type DataGridCell}">
+                            <Setter Property="Padding" Value="5,1,5,1"/>
+                        </Style>
+                    </DataGrid.Resources>
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="SERVICE CODE"
+                                            Binding="{Binding Codigo_prestacion}" 
+                                            Width="120"/>
+
+                        <DataGridTextColumn Header="DESCRIPTION" 
+                                            Binding="{Binding Descripcion_prestacion}" 
+                                            Width="160"/>
+
+                        <DataGridTextColumn Header="UNIT" 
+                                            Binding="{Binding Unidad_prestacion}"
+                                            Width="150"/>
+
+                        <DataGridTextColumn Header="VALUE" 
+                                            Binding="{Binding Valor_prestacion}"
+                                            Width="130"/>
+                    </DataGrid.Columns>
+
+                </DataGrid>
+
+            </Grid>
+
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Border Margin="12.5"
+                    BorderThickness="0.5,0.5,0,0"
+                    BorderBrush="White"
+                    CornerRadius="5"/>
+
+            <Label Content="Equipment" 
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top" 
+                   Margin="70,0,0,0"
+                   Foreground="White"
+                   Background="#FF1F4E79"
+                   FontFamily="Candara Light"
+                   FontSize="18"/>
+
+            <Button HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="25,30,0,30" 
+                    Width="30" 
+                    Height="25"
+                    Padding="0"
+                    BorderBrush="White"
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonAddEquipment_Click">
+
+                <materialDesign:PackIcon Kind="DatabaseAdd"
+                                        HorizontalAlignment="Left"
+                                        VerticalAlignment="Center"
+                                        Height="15" Width="15"
+                                        Foreground="White"/>
+
+            </Button>
+
+            <Button HorizontalAlignment="Left"
+                    VerticalAlignment="Top" 
+                    Margin="25,65,0,30" 
+                    Width="30" 
+                    Height="25"
+                    Padding="0"
+                    BorderBrush="White"
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonEditEquipment_Click">
+
+                <materialDesign:PackIcon Kind="DatabaseEdit"
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
+
+            </Button>
+
+            <Button HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" 
+                    Margin="25,100,0,30" 
+                    Width="30" 
+                    Height="25"
+                    Padding="0"
+                    BorderBrush="White"
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonRemoveEquipment_Click">
+
+                <materialDesign:PackIcon Kind="DatabaseRemove"
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
+
+            </Button>
+
+            <Button HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" 
+                    Margin="25,135,0,30" 
+                    Width="30" 
+                    Height="25"
+                    Padding="0"
+                    BorderBrush="White"
+                    Style="{StaticResource MaterialDesignOutlinedButton}">
+
+                <materialDesign:PackIcon Kind="DatabaseSearch"
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
+
+            </Button>
+
+            <Grid Margin="70,30,25,20"
+                  MinHeight="100">
+
+                <DataGrid x:Name="EquipmentDataGrid"
+                          ScrollViewer.CanContentScroll="True" 
+                          ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                          ScrollViewer.VerticalScrollBarVisibility="Auto"
+                          MinRowHeight="20"
+                          BorderBrush="White"
+                          BorderThickness="0.5,0.5,0.5,0.5"
+                          HorizontalGridLinesBrush="White" 
+                          VerticalGridLinesBrush="White"
+                          GridLinesVisibility="All" Grid.ColumnSpan="2">
+
+                    <DataGrid.Resources>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="BorderThickness" Value="0.5,0.5,0.5,0.5"/>
+                            <Setter Property="BorderBrush" Value="White"/>
+                            <Setter Property="Padding" Value="5,1,5,1"/>
+                        </Style>
+
+                        <Style TargetType="{x:Type DataGridCell}">
+                            <Setter Property="Padding" Value="5,1,5,1"/>
+                        </Style>
+                    </DataGrid.Resources>
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="SERIAL NUMBER"
+                                            Binding="{Binding Numero_de_serie}" 
+                                            Width="120"/>
+
+                        <DataGridTextColumn Header="DESCRIPTION" 
+                                            Binding="{Binding Descripcion_equipo}" 
+                                            Width="160"/>
+
+                        <DataGridTextColumn Header="UNIT" 
+                                            Binding="{Binding Unidad_equipo}" 
+                                            Width="150"/>
+
+                        <DataGridTextColumn Header="VALUE" 
+                                            Binding="{Binding Valor_uso_equipo}"
+                                            Width="130"/>
+                    </DataGrid.Columns>
+
+                </DataGrid>
+
+            </Grid>
+
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Border Margin="12.5"
+                    BorderThickness="0.5,0.5,0,0"
+                    BorderBrush="White"
+                    CornerRadius="5"/>
+
+            <Label Content="Tools" 
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top" 
+                   Margin="70,0,0,0"
+                   Foreground="White"
+                   Background="#FF1F4E79"
+                   FontFamily="Candara Light"
+                   FontSize="18"/>
+
+            <Button HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="25,30,0,30" 
+                    Width="30" 
+                    Height="25"
+                    Padding="0"
+                    BorderBrush="White"
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonAddTool_Click">
+
+                <materialDesign:PackIcon Kind="DatabaseAdd"
+                                        HorizontalAlignment="Left"
+                                        VerticalAlignment="Center"
+                                        Height="15" Width="15"
+                                        Foreground="White"/>
+
+            </Button>
+
+            <Button HorizontalAlignment="Left"
+                    VerticalAlignment="Top" 
+                    Margin="25,65,0,30" 
+                    Width="30" 
+                    Height="25"
+                    Padding="0"
+                    BorderBrush="White"
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonEditTool_Click">
+
+                <materialDesign:PackIcon Kind="DatabaseEdit"
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
+
+            </Button>
+
+            <Button HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" 
+                    Margin="25,100,0,30" 
+                    Width="30" 
+                    Height="25"
+                    Padding="0"
+                    BorderBrush="White"
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonRemoveTool_Click">
+
+                <materialDesign:PackIcon Kind="DatabaseRemove"
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
+
+            </Button>
+
+            <Button HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" 
+                    Margin="25,135,0,30" 
+                    Width="30" 
+                    Height="25"
+                    Padding="0"
+                    BorderBrush="White"
+                    Style="{StaticResource MaterialDesignOutlinedButton}">
+
+                <materialDesign:PackIcon Kind="DatabaseSearch"
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Height="15" Width="15"
+                                         Foreground="White"/>
+
+            </Button>
+
+            <Grid Margin="70,30,25,20"
+                  MinHeight="100">
+
+                <DataGrid x:Name="ToolsDataGrid"
+                          ScrollViewer.CanContentScroll="True" 
+                          ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                          ScrollViewer.VerticalScrollBarVisibility="Auto"
+                          MinRowHeight="20"
+                          BorderBrush="White"
+                          BorderThickness="0.5,0.5,0.5,0.5"
+                          HorizontalGridLinesBrush="White" 
+                          VerticalGridLinesBrush="White"
+                          GridLinesVisibility="All" Grid.ColumnSpan="2">
+
+                    <DataGrid.Resources>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="BorderThickness" Value="0.5,0.5,0.5,0.5"/>
+                            <Setter Property="BorderBrush" Value="White"/>
+                            <Setter Property="Padding" Value="5,1,5,1"/>
+                        </Style>
+
+                        <Style TargetType="{x:Type DataGridCell}">
+                            <Setter Property="Padding" Value="5,1,5,1"/>
+                        </Style>
+                    </DataGrid.Resources>
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="TOOL CODE"
+                                            Binding="{Binding Codigo_herramienta}" 
+                                            Width="120"/>
+
+                        <DataGridTextColumn Header="DESCRIPTION" 
+                                            Binding="{Binding Descripcion_herramienta}" 
+                                            Width="160"/>
+
+                        <DataGridTextColumn Header="UNIT" 
+                                            Binding="{Binding Unidad_herramienta}" 
+                                            Width="150"/>
+
+                        <DataGridTextColumn Header="VALUE" 
+                                            Binding="{Binding Valor_uso_herramienta}"
+                                            Width="130"/>
+                    </DataGrid.Columns>
+
+                </DataGrid>
+
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+</UserControl>

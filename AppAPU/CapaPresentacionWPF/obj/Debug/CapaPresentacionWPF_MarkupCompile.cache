@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\obj\Debug\
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\obj\Debug\
 CapaPresentacionWPF
 none
 false
 DEBUG;TRACE
-D:\05. Desarrollos\AppAPU\AppAPU\CapaPresentacionWPF\App.xaml
-51088544426
+C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\App.xaml
+132035304923
 
-121303292291
-18216327783
-ButtonTheme.xaml;Formulario1.xaml;LoginWindow.xaml;MainWindow.xaml;UserControlMenuItem.xaml;
+171352149119
+18-1998991375
+Add_Edit_Windows\EquipmentWindow.xaml;Add_Edit_Windows\MaterialWindow.xaml;Add_Edit_Windows\ServiceWindow.xaml;Add_Edit_Windows\ToolWindow.xaml;ButtonTheme.xaml;LoginWindow.xaml;MainWindow.xaml;UserControls\Help.xaml;UserControls\ManageProjects.xaml;UserControls\ManageResources.xaml;UserControls\ManageUsers.xaml;UserControls\Settings.xaml;Add_Edit_Windows\UserWindow.xaml;
 
-True
+False
 

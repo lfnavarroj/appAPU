@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaLogicaDeNegocio
 {
-    class clsPresupuestos
+    public class clsPresupuestos
     {
         private int _fecha_realizacion;
         private string _descripcion_presupuesto;

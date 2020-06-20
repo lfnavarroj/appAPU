@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaLogicaDeNegocio
 {
-    class clsPrestaciones
+    public class clsPrestaciones
     {
 
         private int _codigo_prestacion;
