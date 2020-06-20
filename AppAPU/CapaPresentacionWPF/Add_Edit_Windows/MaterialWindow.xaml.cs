@@ -62,7 +62,7 @@ namespace CapaPresentacionWPF.Add_Edit_Windows
             {
                 if (name_TB.Text != "" && value_TB.Text != "")
                 {
-                    if (name_TB.Text != edit_material.Nombre_material && value_TB.Text == edit_material.Precio_material.ToString())
+                    if (name_TB.Text == edit_material.Nombre_material && value_TB.Text == edit_material.Precio_material.ToString())
                     {
                         MessageBox.Show("No changes have been made", "", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
