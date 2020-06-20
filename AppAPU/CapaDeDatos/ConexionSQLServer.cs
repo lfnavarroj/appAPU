@@ -13,15 +13,15 @@ namespace CapaDeDatos
     {
 
         SqlConnection conexion;
-        SqlCommand cmd;
+        //SqlCommand cmd;
         SqlDataAdapter Adaptador;
         DataTable dt = new DataTable();
 
         public void IniciarConexion()
         {
             //Data Source=nibiruserver.database.windows.net;Initial Catalog=bdnibiru;Persist Security Info=True;User ID=lfnavarroj;Password=felipe@1987
-            conexion = new SqlConnection("Data Source=nibiruserver.database.windows.net;Initial Catalog=bdnibiru;Persist Security Info=True;User ID=lfnavarroj;Password=felipe@1987");
-            //conexion = new SqlConnection("Data Source=DESKTOP-AR879QI;Initial Catalog=NibiruBD;Integrated Security=True");// Conexión Local
+            //conexion = new SqlConnection("Data Source=nibiruserver.database.windows.net;Initial Catalog=bdnibiru;Persist Security Info=True;User ID=lfnavarroj;Password=felipe@1987");
+            conexion = new SqlConnection("Data Source=DESKTOP-AR879QI;Initial Catalog=APU;Integrated Security=True");// Conexión Local
             //Data Source=DESKTOP-AR879QI;Initial Catalog=NibiruBD;Integrated Security=True
         }
 
