@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaLogicaDeNegocio
 {
-    class clsProveedores
+    public class clsProveedores
     {
         //Atributos
         private int _nit_proveedor;

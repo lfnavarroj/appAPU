@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using CapaLogicaDeNegocio;
+
 namespace CapaPresentacionWPF
 {
     /// <summary>
@@ -34,15 +36,30 @@ namespace CapaPresentacionWPF
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
+            Usuario1 usu = new Usuario1();
+            usu.id_usuario = TextBoxUsername.Text;
+            usu.contrasena = txtPassword.Password;
+            bool rta= usu.iniciarsesion();
+            if (rta)
+            {
+                MessageBox.Show ("Conectado");
+            }
+            else
+            {
+                MessageBox.Show ("Error");
+            }
+             
 
-            this.Hide();
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.ShowDialog();
-            Close();
+            //this.Hide();
+            //MainWindow mainWindow = new MainWindow();
+            //mainWindow.ShowDialog();
+            //Close();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+
+
             Close();
         }
 

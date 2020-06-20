@@ -8,9 +8,9 @@
         Title="Formulario1" Height="450" Width="800"
         WindowStyle="None"
         >
-    
-    
-    
+
+
+
     <Grid>
         <Grid HorizontalAlignment="Left" Height="408" Margin="10,-1,0,0" VerticalAlignment="Top" Width="779" RenderTransformOrigin="0.5,0.5">
             <Grid.RowDefinitions>
@@ -32,6 +32,9 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </Grid.RenderTransform>
+            <TextBox x:Name="textBox" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="48,28,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="textBox_Copy" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="48,10,0,0" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="textBox_Copy1" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="48,58,0,0" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         </Grid>
 
     </Grid>
