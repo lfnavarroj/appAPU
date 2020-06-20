@@ -1,7 +1,7 @@
 ﻿using System;
 namespace CapaLogicaDeNegocio
 {
-    class clsTipoCostos
+    public class clsTipoCostos
     {
 
         private int id_tipo;

@@ -29,5 +29,10 @@ namespace CapaDePresentacion
             label6.Text= ("El material creado es " + objeto.Nombre_material +" Cuesta " +objeto.Precio_material.ToString());
             //Console.ReadLine();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            clsUsuarios nuevo = new clsUsuarios();
+        }
     }
 }

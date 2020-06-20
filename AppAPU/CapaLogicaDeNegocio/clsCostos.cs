@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaLogicaDeNegocio
 {
-    class clsCostos
+    public class clsCostos
     {
         private char _id_costo;
         private string _descripcíon_costo;

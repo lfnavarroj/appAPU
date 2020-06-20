@@ -25,6 +25,7 @@ namespace CapaPresentacionWPF
         public MainWindow()
         {
             InitializeComponent();
+            this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
 
             List<MenuItem> menu = new List<MenuItem>
             {
@@ -45,14 +46,30 @@ namespace CapaPresentacionWPF
                 DragMove();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ButtonMinimize_Click(object sender, RoutedEventArgs e)
         {
-            WindowState = WindowState.Minimized;
+            this.WindowState = WindowState.Minimized;
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private bool maximized = true;
+        private void ButtonMaximize_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            if (!maximized)
+            {
+                this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
+                this.WindowState = WindowState.Maximized;
+                maximized = true;
+            }
+            else
+            {
+                this.WindowState = WindowState.Normal;
+                maximized = false;
+            }
+        }
+
+        private void ButtonClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
 
         private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -73,7 +90,7 @@ namespace CapaPresentacionWPF
 
                 case 2:
                     MainGrid.Children.Clear();
-                    MainGrid.Children.Add(new ManageUsers());
+                    MainGrid.Children.Add(new ManageMaterials());
                     break;
 
                 case 3:
@@ -87,7 +104,7 @@ namespace CapaPresentacionWPF
                     break;
 
                 case 5:
-                    Close();
+                    this.Close();
                     break;
 
                 default:
