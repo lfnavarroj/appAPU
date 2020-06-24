@@ -56,7 +56,6 @@
     <Compile Include="clsUnitarios.cs" />
     <Compile Include="clsUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Usuario1.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaDeDatos\CapaDeDatos.csproj">

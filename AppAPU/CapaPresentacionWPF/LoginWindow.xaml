@@ -94,7 +94,7 @@
         <StackPanel Grid.Row="1">
             <StackPanel Orientation="Horizontal">
                 <TextBox x:Name="TextBoxUsername" 
-                         Text="Username"
+                         Text="20201495001"
                          FontFamily="Candida Light"
                          FontSize="20"
                          HorizontalAlignment="Center"
@@ -118,7 +118,7 @@
                     Opacity="0.5"/>
 
             <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
-                <PasswordBox x:Name="txtPassword" Password="Password"
+                <PasswordBox x:Name="txtPassword" Password="20201495001"
                              FontFamily="Candida Light"
                              FontSize="20"
                              HorizontalAlignment="Center"

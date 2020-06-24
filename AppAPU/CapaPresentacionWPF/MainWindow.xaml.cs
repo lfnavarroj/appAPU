@@ -15,6 +15,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using CapaLogicaDeNegocio;
+
 namespace CapaPresentacionWPF
 {
     /// <summary>
@@ -22,10 +24,20 @@ namespace CapaPresentacionWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        string perfil;
+        
+        public MainWindow(long id_user)
         {
             InitializeComponent();
             this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
+
+            clsUsuarios usuario_actual = new clsUsuarios();
+            usuario_actual.Id_usuario = id_user;
+            usuario_actual.Perfil = usuario_actual.PerfilActual();
+
+            this.perfil = usuario_actual.Perfil;
+
+            current_user.Text = "Current user: " + usuario_actual.Id_usuario.ToString() + ". Role: " + usuario_actual.Perfil;
 
             List<MenuItem> menu = new List<MenuItem>
             {
@@ -84,13 +96,19 @@ namespace CapaPresentacionWPF
                     break;
 
                 case 1:
-                    MainGrid.Children.Clear();
-                    MainGrid.Children.Add(new ManageResources());
+                    if (perfil == "Administrator")
+                    {
+                        MainGrid.Children.Clear();
+                        MainGrid.Children.Add(new ManageResources());
+                    }
                     break;
 
                 case 2:
-                    MainGrid.Children.Clear();
-                    MainGrid.Children.Add(new ManageMaterials());
+                    if (perfil == "Administrator")
+                    {
+                        MainGrid.Children.Clear();
+                        MainGrid.Children.Add(new ManageUsers());
+                    }
                     break;
 
                 case 3:

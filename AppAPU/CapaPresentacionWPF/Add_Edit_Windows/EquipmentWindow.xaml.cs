@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data;
 
 namespace CapaPresentacionWPF.Add_Edit_Windows
 {
@@ -20,27 +21,31 @@ namespace CapaPresentacionWPF.Add_Edit_Windows
     /// </summary>
     public partial class EquipmentWindow : Window
     {
-        ManageResources gridD;
-        clsEquipos edit_equipo;
+        clsEquipos edit_equipo = new clsEquipos();
         bool edit;
-        int index;
+        int selRow;
+        DataTable dt = new DataTable();
 
-        public EquipmentWindow(ManageResources gr, bool ed)
+        public EquipmentWindow(bool ed, int selr)
         {
             InitializeComponent();
-            this.gridD = gr;
             this.edit = ed;
+            this.selRow = selr;
 
             if (edit == true)
             {
-                this.edit_equipo = gridD.EquipmentDataGrid.SelectedItem as clsEquipos;
+                clsEquipos obj = new clsEquipos();
+                dt = obj.CargarEquipos();
+
+                this.edit_equipo.Numero_de_serie = dt.Rows[selRow].Field<int>(0);
+                this.edit_equipo.Descripcion_equipo = dt.Rows[selRow].Field<string>(1);
+                this.edit_equipo.Unidad_equipo = dt.Rows[selRow].Field<string>(2);
+                this.edit_equipo.Valor_uso_equipo = (float)dt.Rows[selRow].Field<double>(3);
 
                 serial_TB.Text = edit_equipo.Numero_de_serie.ToString();
                 description_TB.Text = edit_equipo.Descripcion_equipo;
                 unit_TB.Text = edit_equipo.Unidad_equipo;
                 value_TB.Text = edit_equipo.Valor_uso_equipo.ToString();
-
-                this.index = gridD.EquipmentDataGrid.SelectedIndex;
 
                 titleLabel.Content = "Edit equipment";
 
@@ -80,8 +85,7 @@ namespace CapaPresentacionWPF.Add_Edit_Windows
                             edit_equipo.Unidad_equipo = unit_TB.Text;
                             edit_equipo.Valor_uso_equipo = float.Parse(value_TB.Text);
 
-                            gridD.EquipmentDataGrid.Items.RemoveAt(index);
-                            gridD.EquipmentDataGrid.Items.Insert(index, edit_equipo);
+                            edit_equipo.ActualizarEquipo();
                             this.Close();
                         }
                     }
@@ -105,7 +109,7 @@ namespace CapaPresentacionWPF.Add_Edit_Windows
                             Valor_uso_equipo = float.Parse(value_TB.Text)
                         };
 
-                        gridD.EquipmentDataGrid.Items.Add(nuevo_equipo);
+                        nuevo_equipo.AgregarEquipo();
                         this.Close();
                     }
                 }

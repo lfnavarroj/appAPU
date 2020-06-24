@@ -130,19 +130,23 @@
                         </Style>
                     </DataGrid.Resources>
 
-                    <DataGrid.Columns>
+                    <!--<DataGrid.Columns>
                         <DataGridTextColumn Header="MATERIAL CODE"
                                             Binding="{Binding Cod_material}" 
                                             Width="120"/>
 
-                        <DataGridTextColumn Header="NAME" 
-                                            Binding="{Binding Nombre_material}" 
-                                            Width="310"/>
+                        <DataGridTextColumn Header="DESCRIPTION" 
+                                            Binding="{Binding Descripcion_material}" 
+                                            Width="160"/>
+
+                        <DataGridTextColumn Header="UNIT" 
+                                            Binding="{Binding Unidad_material}"
+                                            Width="150"/>
 
                         <DataGridTextColumn Header="VALUE" 
                                             Binding="{Binding Precio_material}"
                                             Width="130"/>
-                    </DataGrid.Columns>
+                    </DataGrid.Columns>-->
 
                 </DataGrid>
 
@@ -262,7 +266,7 @@
                         </Style>
                     </DataGrid.Resources>
 
-                    <DataGrid.Columns>
+                    <!--<DataGrid.Columns>
                         <DataGridTextColumn Header="SERVICE CODE"
                                             Binding="{Binding Codigo_prestacion}" 
                                             Width="120"/>
@@ -278,7 +282,7 @@
                         <DataGridTextColumn Header="VALUE" 
                                             Binding="{Binding Valor_prestacion}"
                                             Width="130"/>
-                    </DataGrid.Columns>
+                    </DataGrid.Columns>-->
 
                 </DataGrid>
 
@@ -398,7 +402,7 @@
                         </Style>
                     </DataGrid.Resources>
 
-                    <DataGrid.Columns>
+                    <!--<DataGrid.Columns>
                         <DataGridTextColumn Header="SERIAL NUMBER"
                                             Binding="{Binding Numero_de_serie}" 
                                             Width="120"/>
@@ -414,7 +418,7 @@
                         <DataGridTextColumn Header="VALUE" 
                                             Binding="{Binding Valor_uso_equipo}"
                                             Width="130"/>
-                    </DataGrid.Columns>
+                    </DataGrid.Columns>-->
 
                 </DataGrid>
 
@@ -534,7 +538,7 @@
                         </Style>
                     </DataGrid.Resources>
 
-                    <DataGrid.Columns>
+                    <!--<DataGrid.Columns>
                         <DataGridTextColumn Header="TOOL CODE"
                                             Binding="{Binding Codigo_herramienta}" 
                                             Width="120"/>
@@ -550,7 +554,7 @@
                         <DataGridTextColumn Header="VALUE" 
                                             Binding="{Binding Valor_uso_herramienta}"
                                             Width="130"/>
-                    </DataGrid.Columns>
+                    </DataGrid.Columns>-->
 
                 </DataGrid>
 

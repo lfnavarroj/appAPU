@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,29 +22,36 @@ namespace CapaPresentacionWPF
     /// </summary>
     public partial class UserWindow : Window
     {
-        ManageMaterials gridD;
-        clsUsuarios edit_usuario;
+        clsUsuarios edit_usuario = new clsUsuarios();
         bool edit;
-        int index;
+        int selRow;
+        DataTable dt = new DataTable();
 
-        public UserWindow(ManageMaterials gr, bool ed)
+        public UserWindow(bool ed, int selr)
         {
             InitializeComponent();
-            this.gridD = gr;
             this.edit = ed;
+            this.selRow = selr;
 
             if(edit == true)
             {
-                this.edit_usuario = gridD.MaterialsDataGrid.SelectedItem as clsUsuarios;
+                clsUsuarios obj = new clsUsuarios();
+                dt = obj.CargarUsuarios();
 
-                id_TB.Text = edit_usuario.Id_usuario;
+                this.edit_usuario.Id_usuario = dt.Rows[selRow].Field<long>(0);
+                this.edit_usuario.Nombre_usuario = dt.Rows[selRow].Field<string>(1);
+                this.edit_usuario.Apellidos_usuario = dt.Rows[selRow].Field<string>(2);
+                this.edit_usuario.Telefono_usuario = dt.Rows[selRow].Field<long>(3);
+                this.edit_usuario.Correo_usuario = dt.Rows[selRow].Field<string>(4);
+                this.edit_usuario.Perfil = dt.Rows[selRow].Field<string>(5);
+                this.edit_usuario.Contraseña = dt.Rows[selRow].Field<string>(6);
+
+                id_TB.Text = edit_usuario.Id_usuario.ToString();
                 name_TB.Text = edit_usuario.Nombre_usuario;
                 surname_TB.Text = edit_usuario.Apellidos_usuario;
                 telephone_TB.Text = edit_usuario.Telefono_usuario.ToString();
                 email_TB.Text = edit_usuario.Correo_usuario;
                 password_TB.Password = edit_usuario.Contraseña;
-
-                this.index = gridD.MaterialsDataGrid.SelectedIndex;
 
                 titleLabel.Content = "Edit user";
 
@@ -94,8 +102,7 @@ namespace CapaPresentacionWPF
                             edit_usuario.Correo_usuario = email_TB.Text;
                             edit_usuario.Contraseña = password_TB.Password;
 
-                            gridD.MaterialsDataGrid.Items.RemoveAt(index);
-                            gridD.MaterialsDataGrid.Items.Insert(index, edit_usuario);
+                            edit_usuario.ActualizarUsuario();
                             this.Close();
                         }
                     }
@@ -113,7 +120,7 @@ namespace CapaPresentacionWPF
                     {
                         clsUsuarios nuevo_usuario = new clsUsuarios
                         {
-                            Id_usuario = id_TB.Text,
+                            Id_usuario = long.Parse(id_TB.Text),
                             Nombre_usuario = name_TB.Text,
                             Apellidos_usuario = surname_TB.Text,
                             Telefono_usuario = long.Parse(telephone_TB.Text),
@@ -122,7 +129,8 @@ namespace CapaPresentacionWPF
                             Perfil = profile_CB.Text
                         };
 
-                        gridD.MaterialsDataGrid.Items.Add(nuevo_usuario);
+                        nuevo_usuario.AgregarUsuario();
+                        
                         this.Close();
                     }
                 }

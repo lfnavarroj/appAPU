@@ -6,7 +6,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:CapaPresentacionWPF.Add_Edit_Windows"
         mc:Ignorable="d"
-        Title="MaterialWindow" Height="190" Width="280"
+        Title="MaterialWindow" Height="190" Width="400"
         AllowsTransparency="True" Background="Transparent"
         WindowStyle="None" ResizeMode="NoResize"
         MouseDown="Window_MouseDown"
@@ -85,14 +85,14 @@
                     VerticalAlignment="Top"
                     HorizontalAlignment="Left">
 
-                <TextBlock Text="Name"  
+                <TextBlock Text="Description"  
                            FontFamily="Candida Light" 
                            FontSize="12"
                            Foreground="White"
                            HorizontalAlignment="Left"/>
 
-                <TextBox x:Name="name_TB" 
-                         Width="220" 
+                <TextBox x:Name="description_TB" 
+                         Width="340" 
                          Background="#FF353535"
                          BorderBrush="White"
                          BorderThickness="0.5"
@@ -102,6 +102,26 @@
             </StackPanel>
 
             <StackPanel Margin="30,100,0,0"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left">
+
+                <TextBlock Text="Unit"  
+                           FontFamily="Candida Light" 
+                           FontSize="12"
+                           Foreground="White"
+                           HorizontalAlignment="Left"/>
+
+                <TextBox x:Name="unit_TB" 
+                         Width="100" 
+                         Background="#FF353535"
+                         BorderBrush="White"
+                         BorderThickness="0.5"
+                         Foreground="White"   
+                         FontFamily="Candida Light"/>
+
+            </StackPanel>
+
+            <StackPanel Margin="150,100,0,0"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Left">
 

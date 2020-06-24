@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Data;
+
 namespace CapaLogicaDeNegocio
 {
     public class clsTipoCostos

@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data;
 
 namespace CapaPresentacionWPF.Add_Edit_Windows
 {
@@ -20,26 +21,30 @@ namespace CapaPresentacionWPF.Add_Edit_Windows
     /// </summary>
     public partial class ToolWindow : Window
     {
-        ManageResources gridD;
-        clsHerramientas edit_herramienta;
+        clsHerramientas edit_herramienta = new clsHerramientas();
         bool edit;
-        int index;
+        int selRow;
+        DataTable dt = new DataTable();
 
-        public ToolWindow(ManageResources gr, bool ed)
+        public ToolWindow(bool ed, int selr)
         {
             InitializeComponent();
-            this.gridD = gr;
             this.edit = ed;
+            this.selRow = selr;
 
             if (edit == true)
             {
-                this.edit_herramienta = gridD.ToolsDataGrid.SelectedItem as clsHerramientas;
+                clsHerramientas obj = new clsHerramientas();
+                dt = obj.CargarHerramientas();
+
+                this.edit_herramienta.Codigo_herramienta = dt.Rows[selRow].Field<int>(0);
+                this.edit_herramienta.Descripcion_herramienta = dt.Rows[selRow].Field<string>(1);
+                this.edit_herramienta.Unidad_herramienta = dt.Rows[selRow].Field<string>(2);
+                this.edit_herramienta.Valor_uso_herramienta = (float)dt.Rows[selRow].Field<double>(3);
 
                 description_TB.Text = edit_herramienta.Descripcion_herramienta;
                 unit_TB.Text = edit_herramienta.Unidad_herramienta;
                 value_TB.Text = edit_herramienta.Valor_uso_herramienta.ToString();
-
-                this.index = gridD.ToolsDataGrid.SelectedIndex;
 
                 titleLabel.Content = "Edit tool";
             }
@@ -75,8 +80,7 @@ namespace CapaPresentacionWPF.Add_Edit_Windows
                             edit_herramienta.Unidad_herramienta = unit_TB.Text;
                             edit_herramienta.Valor_uso_herramienta = float.Parse(value_TB.Text);
 
-                            gridD.ToolsDataGrid.Items.RemoveAt(index);
-                            gridD.ToolsDataGrid.Items.Insert(index, edit_herramienta);
+                            edit_herramienta.ActualizarHerramienta();
                             this.Close();
                         }
                     }
@@ -99,7 +103,7 @@ namespace CapaPresentacionWPF.Add_Edit_Windows
                             Valor_uso_herramienta = float.Parse(value_TB.Text)
                         };
 
-                        gridD.ToolsDataGrid.Items.Add(nueva_herramienta);
+                        nueva_herramienta.AgregarHerramienta();
                         this.Close();
                     }
                 }

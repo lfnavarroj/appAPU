@@ -12,44 +12,110 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data;
+
+using CapaLogicaDeNegocio;
 
 namespace CapaPresentacionWPF
 {
     /// <summary>
     /// Lógica de interacción para ManageUsers.xaml
     /// </summary>
-    public partial class ManageMaterials : UserControl
+    public partial class ManageUsers : UserControl
     {
         bool edit;
+        DataTable dt = new DataTable();
+        int selRow;
 
-        public ManageMaterials()
+        public ManageUsers()
         {
             InitializeComponent();
+
+            clsUsuarios obj = new clsUsuarios();
+            dt = obj.CargarUsuarios();
+
+            dt.Columns[0].ColumnName = "USER ID";
+            dt.Columns[1].ColumnName = "NAME";
+            dt.Columns[2].ColumnName = "SURNAME";
+            dt.Columns[3].ColumnName = "TELEPHONE";
+            dt.Columns[4].ColumnName = "E-MAIL";
+            dt.Columns[5].ColumnName = "PROFILE";
+            dt.Columns[6].ColumnName = "PASSWORD";
+
+            UsersDataGrid.ItemsSource = dt.DefaultView;
         }
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
             edit = false;
-            UserWindow userWindow = new UserWindow(this, edit);
+            UserWindow userWindow = new UserWindow(edit, selRow);
             userWindow.ShowDialog();
+
+            clsUsuarios obj = new clsUsuarios();
+            dt = obj.CargarUsuarios();
+
+            dt.Columns[0].ColumnName = "USER ID";
+            dt.Columns[1].ColumnName = "NAME";
+            dt.Columns[2].ColumnName = "SURNAME";
+            dt.Columns[3].ColumnName = "TELEPHONE";
+            dt.Columns[4].ColumnName = "E-MAIL";
+            dt.Columns[5].ColumnName = "PROFILE";
+            dt.Columns[6].ColumnName = "PASSWORD";
+
+            UsersDataGrid.ItemsSource = dt.DefaultView;
         }
 
         private void ButtonEdit_Click(object sender, RoutedEventArgs e)
         {
-            if (MaterialsDataGrid.SelectedItem != null)
+            if (UsersDataGrid.SelectedItem != null)
             {
                 edit = true;
-                UserWindow userWindow = new UserWindow(this, edit);
+                selRow = UsersDataGrid.SelectedIndex;
+                UserWindow userWindow = new UserWindow(edit, selRow);
                 userWindow.ShowDialog();
+
+                clsUsuarios obj = new clsUsuarios();
+                dt = obj.CargarUsuarios();
+
+                dt.Columns[0].ColumnName = "USER ID";
+                dt.Columns[1].ColumnName = "NAME";
+                dt.Columns[2].ColumnName = "SURNAME";
+                dt.Columns[3].ColumnName = "TELEPHONE";
+                dt.Columns[4].ColumnName = "E-MAIL";
+                dt.Columns[5].ColumnName = "PROFILE";
+                dt.Columns[6].ColumnName = "PASSWORD";
+
+                UsersDataGrid.ItemsSource = dt.DefaultView;
             }
         }
 
         private void ButtonRemove_Click(object sender, RoutedEventArgs e)
         {
-            if (MaterialsDataGrid.SelectedItem != null)
+            if (UsersDataGrid.SelectedItem != null)
             {
                 if (MessageBox.Show("Do you want to remove this user?","",MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No) == MessageBoxResult.Yes)
-                    MaterialsDataGrid.Items.Remove(MaterialsDataGrid.SelectedItem);
+                {
+                    selRow = UsersDataGrid.SelectedIndex;
+
+                    clsUsuarios obj = new clsUsuarios
+                    {
+                        Id_usuario = dt.Rows[selRow].Field<long>(0)
+                    };
+
+                    obj.BorrarUsuario();
+
+                    dt = obj.CargarUsuarios();
+
+                    dt.Columns[0].ColumnName = "USER ID";
+                    dt.Columns[1].ColumnName = "NAME";
+                    dt.Columns[2].ColumnName = "SURNAME";
+                    dt.Columns[3].ColumnName = "TELEPHONE";
+                    dt.Columns[4].ColumnName = "E-MAIL";
+                    dt.Columns[5].ColumnName = "PROFILE";
+                    dt.Columns[6].ColumnName = "PASSWORD";
+
+                    UsersDataGrid.ItemsSource = dt.DefaultView;
+                }
             }
         }
     }

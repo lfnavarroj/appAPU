@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using CapaLogicaDeNegocio;
+
 namespace CapaPresentacionWPF
 {
     /// <summary>
@@ -33,10 +35,34 @@ namespace CapaPresentacionWPF
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Hide();
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
-            this.Close();
+            bool isNumeric = long.TryParse(TextBoxUsername.Text, out long n);
+
+            if (isNumeric)
+            {
+                clsUsuarios obj = new clsUsuarios
+                {
+                    Id_usuario = n,
+                    Contraseña = txtPassword.Password,
+                };
+
+                bool inicio = obj.IniciarSesion();
+
+                if (inicio)
+                {
+                    this.Hide();
+                    MainWindow mainWindow = new MainWindow(obj.Id_usuario);
+                    mainWindow.Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect username or password", "", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+            }
+            else
+            {
+                MessageBox.Show("The username must be numeric", "", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

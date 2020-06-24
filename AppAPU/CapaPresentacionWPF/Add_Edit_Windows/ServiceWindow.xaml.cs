@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data;
 
 namespace CapaPresentacionWPF.Add_Edit_Windows
 {
@@ -20,26 +21,30 @@ namespace CapaPresentacionWPF.Add_Edit_Windows
     /// </summary>
     public partial class ServiceWindow : Window
     {
-        ManageResources gridD;
-        clsPrestaciones edit_prestacion;
+        clsPrestaciones edit_prestacion = new clsPrestaciones();
         bool edit;
-        int index;
+        int selRow;
+        DataTable dt = new DataTable();
 
-        public ServiceWindow(ManageResources gr, bool ed)
+        public ServiceWindow(bool ed, int selr)
         {
             InitializeComponent();
-            this.gridD = gr;
             this.edit = ed;
+            this.selRow = selr;
 
             if (edit == true)
             {
-                this.edit_prestacion = gridD.ServicesDataGrid.SelectedItem as clsPrestaciones;
+                clsPrestaciones obj = new clsPrestaciones();
+                dt = obj.CargarPrestaciones();
+
+                this.edit_prestacion.Codigo_prestacion = dt.Rows[selRow].Field<int>(0);
+                this.edit_prestacion.Descripcion_prestacion = dt.Rows[selRow].Field<string>(1);
+                this.edit_prestacion.Unidad_prestacion = dt.Rows[selRow].Field<string>(2);
+                this.edit_prestacion.Valor_prestacion = (float)dt.Rows[selRow].Field<double>(3);
 
                 description_TB.Text = edit_prestacion.Descripcion_prestacion;
                 unit_TB.Text = edit_prestacion.Unidad_prestacion;
                 value_TB.Text = edit_prestacion.Valor_prestacion.ToString();
-
-                this.index = gridD.ServicesDataGrid.SelectedIndex;
 
                 titleLabel.Content = "Edit service";
             }
@@ -75,8 +80,7 @@ namespace CapaPresentacionWPF.Add_Edit_Windows
                             edit_prestacion.Unidad_prestacion = unit_TB.Text;
                             edit_prestacion.Valor_prestacion = float.Parse(value_TB.Text);
 
-                            gridD.ServicesDataGrid.Items.RemoveAt(index);
-                            gridD.ServicesDataGrid.Items.Insert(index, edit_prestacion);
+                            edit_prestacion.ActualizarPrestacion();
                             this.Close();
                         }
                     }
@@ -92,14 +96,14 @@ namespace CapaPresentacionWPF.Add_Edit_Windows
                 {
                     if (MessageBox.Show("Do you want to add this service?", "", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No) == MessageBoxResult.Yes)
                     {
-                        clsPrestaciones nuevo_servicio = new clsPrestaciones
+                        clsPrestaciones nueva_prestacion = new clsPrestaciones
                         {
                             Descripcion_prestacion = description_TB.Text,
                             Unidad_prestacion = unit_TB.Text,
                             Valor_prestacion = float.Parse(value_TB.Text)
                         };
 
-                        gridD.ServicesDataGrid.Items.Add(nuevo_servicio);
+                        nueva_prestacion.AgregarPrestacion();
                         this.Close();
                     }
                 }

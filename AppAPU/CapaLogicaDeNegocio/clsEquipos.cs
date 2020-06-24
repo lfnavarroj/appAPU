@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using CapaDeDatos;
 
 namespace CapaLogicaDeNegocio
 {
@@ -18,16 +20,42 @@ namespace CapaLogicaDeNegocio
         public string Unidad_equipo { get => _unidad_equipo; set => _unidad_equipo = value; }
         public float Valor_uso_equipo { get => _valor_uso_equipo; set => _valor_uso_equipo = value; }
 
-        private void agregarequipo()
+        public DataTable CargarEquipos()
         {
-        }
-        private void eliminarequipo()
-        {
-        }
-        private void validarequipo()
-        {
+            ConexionSQLServer obj = new ConexionSQLServer();
+            obj.IniciarConexion();
+            string sql = "select * ";
+            sql += "from Equipos";
+            DataTable datos = obj.EjecutarConsulta(sql);
+            return datos;
         }
 
+        public void AgregarEquipo()
+        {
+            ConexionSQLServer obj = new ConexionSQLServer();
+            obj.IniciarConexion();
+            string sql = "insert into Equipos Values (";
+            sql += Numero_de_serie + ",'" + Descripcion_equipo + "','" + Unidad_equipo + "'," + Valor_uso_equipo + ")";
+            obj.Ejecutar_sql(sql);
+        }
 
+        public void ActualizarEquipo()
+        {
+            ConexionSQLServer obj = new ConexionSQLServer();
+            obj.IniciarConexion();
+            string sql = "update Equipos set descripcion_equipo ='" + Descripcion_equipo + "', unidad_equipo = '" + Unidad_equipo;
+            sql += "', valor_uso_equipo = " + Valor_uso_equipo;
+            sql += " where no_serie = " + Numero_de_serie;
+            obj.Ejecutar_sql(sql);
+        }
+
+        public void BorrarEquipo()
+        {
+            ConexionSQLServer obj = new ConexionSQLServer();
+            obj.IniciarConexion();
+            string sql = "delete from Equipos ";
+            sql += "where no_serie = " + Numero_de_serie;
+            obj.Ejecutar_sql(sql);
+        }
     }
 }

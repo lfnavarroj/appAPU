@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data;
 
 namespace CapaPresentacionWPF.Add_Edit_Windows
 {
@@ -20,25 +21,30 @@ namespace CapaPresentacionWPF.Add_Edit_Windows
     /// </summary>
     public partial class MaterialWindow : Window
     {
-        ManageResources gridD;
-        clsMateriales edit_material;
+        clsMateriales edit_material = new clsMateriales();
         bool edit;
-        int index;
+        int selRow;
+        DataTable dt = new DataTable();
 
-        public MaterialWindow(ManageResources gr, bool ed)
+        public MaterialWindow(bool ed, int selr)
         {
             InitializeComponent();
-            this.gridD = gr;
             this.edit = ed;
+            this.selRow = selr;
 
             if (edit == true)
             {
-                this.edit_material = gridD.MaterialsDataGrid.SelectedItem as clsMateriales;
+                clsMateriales obj = new clsMateriales();
+                dt = obj.CargarMateriales();
 
-                name_TB.Text = edit_material.Nombre_material;
+                this.edit_material.Cod_material = dt.Rows[selRow].Field<int>(0);
+                this.edit_material.Descripcion_material = dt.Rows[selRow].Field<string>(1);
+                this.edit_material.Unidad_material = dt.Rows[selRow].Field<string>(2);
+                this.edit_material.Precio_material = (float)dt.Rows[selRow].Field<double>(3);
+
+                description_TB.Text = edit_material.Descripcion_material;
+                unit_TB.Text = edit_material.Unidad_material;
                 value_TB.Text = edit_material.Precio_material.ToString();
-
-                this.index = gridD.MaterialsDataGrid.SelectedIndex;
 
                 titleLabel.Content = "Edit material";
             }
@@ -60,9 +66,9 @@ namespace CapaPresentacionWPF.Add_Edit_Windows
         {
             if (edit == true)
             {
-                if (name_TB.Text != "" && value_TB.Text != "")
+                if (description_TB.Text != "" && unit_TB.Text != "" && value_TB.Text != "")
                 {
-                    if (name_TB.Text == edit_material.Nombre_material && value_TB.Text == edit_material.Precio_material.ToString())
+                    if (description_TB.Text == edit_material.Descripcion_material && unit_TB.Text == edit_material.Unidad_material && value_TB.Text == edit_material.Precio_material.ToString())
                     {
                         MessageBox.Show("No changes have been made", "", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
@@ -70,11 +76,11 @@ namespace CapaPresentacionWPF.Add_Edit_Windows
                     {
                         if (MessageBox.Show("Do you want to save the changes?", "", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No) == MessageBoxResult.Yes)
                         {
-                            edit_material.Nombre_material = name_TB.Text;
+                            edit_material.Descripcion_material = description_TB.Text;
+                            edit_material.Unidad_material = unit_TB.Text;
                             edit_material.Precio_material = float.Parse(value_TB.Text);
 
-                            gridD.MaterialsDataGrid.Items.RemoveAt(index);
-                            gridD.MaterialsDataGrid.Items.Insert(index, edit_material);
+                            edit_material.ActualizarMaterial();
                             this.Close();
                         }
                     }
@@ -86,17 +92,18 @@ namespace CapaPresentacionWPF.Add_Edit_Windows
             }
             else
             {
-                if (name_TB.Text != "" && value_TB.Text != "")
+                if (description_TB.Text != "" && unit_TB.Text != "" && value_TB.Text != "")
                 {
                     if (MessageBox.Show("Do you want to add this material?", "", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No) == MessageBoxResult.Yes)
                     {
                         clsMateriales nuevo_material = new clsMateriales
                         {
-                            Nombre_material = name_TB.Text,
+                            Descripcion_material = description_TB.Text,
+                            Unidad_material = unit_TB.Text,
                             Precio_material = float.Parse(value_TB.Text)
                         };
 
-                        gridD.MaterialsDataGrid.Items.Add(nuevo_material);
+                        nuevo_material.AgregarMaterial();
                         this.Close();
                     }
                 }
@@ -111,12 +118,14 @@ namespace CapaPresentacionWPF.Add_Edit_Windows
         {
             if (edit == true)
             {
-                name_TB.Text = edit_material.Nombre_material;
+                description_TB.Text = edit_material.Descripcion_material;
+                unit_TB.Text = edit_material.Unidad_material;
                 value_TB.Text = edit_material.Precio_material.ToString();
             }
             else
             {
-                name_TB.Text = "";
+                description_TB.Text = "";
+                unit_TB.Text = "";
                 value_TB.Text = "";
             }
         }

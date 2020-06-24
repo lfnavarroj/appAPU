@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using CapaDeDatos;
 
 namespace CapaLogicaDeNegocio
 {
@@ -20,9 +22,42 @@ namespace CapaLogicaDeNegocio
         public float Valor_prestacion { get => _valor_prestacion; set => _valor_prestacion = value; }
 
 
-        public void EliminiarPrestacion()
+        public DataTable CargarPrestaciones()
         {
+            ConexionSQLServer obj = new ConexionSQLServer();
+            obj.IniciarConexion();
+            string sql = "select * ";
+            sql += "from Prestaciones";
+            DataTable datos = obj.EjecutarConsulta(sql);
+            return datos;
+        }
 
+        public void AgregarPrestacion()
+        {
+            ConexionSQLServer obj = new ConexionSQLServer();
+            obj.IniciarConexion();
+            string sql = "insert into Prestaciones(descripcion_prestacion, unidad_prestacion, valor_prestacion) Values ('";
+            sql += Descripcion_prestacion + "','" + Unidad_prestacion + "'," + Valor_prestacion + ")";
+            obj.Ejecutar_sql(sql);
+        }
+
+        public void ActualizarPrestacion()
+        {
+            ConexionSQLServer obj = new ConexionSQLServer();
+            obj.IniciarConexion();
+            string sql = "update Prestaciones set descripcion_prestacion ='" + Descripcion_prestacion + "', unidad_prestacion = '" + Unidad_prestacion;
+            sql += "', valor_prestacion = " + Valor_prestacion;
+            sql += " where codigo_prestacion = " + Codigo_prestacion;
+            obj.Ejecutar_sql(sql);
+        }
+
+        public void BorrarPrestacion()
+        {
+            ConexionSQLServer obj = new ConexionSQLServer();
+            obj.IniciarConexion();
+            string sql = "delete from Prestaciones ";
+            sql += "where codigo_prestacion = " + Codigo_prestacion;
+            obj.Ejecutar_sql(sql);
         }
     }
 }
