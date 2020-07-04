@@ -60,5 +60,14 @@ namespace CapaLogicaDeNegocio
             sql += "where codigo_material = " + Cod_material;
             obj.Ejecutar_sql(sql);
         }
+        public DataTable ClonarMateriales()
+        {
+            ConexionSQLServer obj = new ConexionSQLServer();
+            obj.IniciarConexion();
+            string sql = "select codigo_material, descripcion_material, unidad_material, valor_material ";
+            sql += "from Materiales where codigo_material = 1";
+            DataTable datos = obj.EjecutarConsulta(sql);
+            return datos;
+        }
     }
 }

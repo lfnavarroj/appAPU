@@ -43,7 +43,7 @@
                 CornerRadius="5"/>
 
         <Grid Grid.Row="0">
-            <Label Content="Projects" 
+            <Label x:Name="prueba" Content="Projects" 
                    HorizontalAlignment="Left"
                    VerticalAlignment="Top" 
                    Margin="70,0,0,0"
@@ -59,8 +59,8 @@
                     Height="25"
                     Padding="0"
                     BorderBrush="White"
-                    Click="Button_Click"
-                    Style="{StaticResource MaterialDesignOutlinedButton}">
+                    Style="{StaticResource MaterialDesignOutlinedButton}"                    
+                    Click="ButtonAddProject_Click">
 
                 <materialDesign:PackIcon Kind="CreateNewFolder"
                                          HorizontalAlignment="Left"
@@ -77,7 +77,8 @@
                     Height="25"
                     Padding="0"
                     BorderBrush="White"
-                    Style="{StaticResource MaterialDesignOutlinedButton}">
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonEditProject_Click">
 
                 <materialDesign:PackIcon Kind="FolderEdit"
                                          HorizontalAlignment="Left"
@@ -94,7 +95,8 @@
                     Height="25"
                     Padding="0"
                     BorderBrush="White"
-                    Style="{StaticResource MaterialDesignOutlinedButton}">
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonRemoveProject_Click">
 
                 <materialDesign:PackIcon Kind="FolderRemove"
                                          HorizontalAlignment="Left"
@@ -136,7 +138,8 @@
                           BorderThickness="0.5,0.5,0.5,0.5"
                           HorizontalGridLinesBrush="White" 
                           VerticalGridLinesBrush="White"
-                          GridLinesVisibility="All" Grid.ColumnSpan="2">
+                          GridLinesVisibility="All" Grid.ColumnSpan="2"
+                          SelectionChanged="ProjectsDataGrid_SelectionChanged">
 
                     <DataGrid.Resources>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
@@ -149,20 +152,6 @@
                             <Setter Property="Padding" Value="5,1,5,1"/>
                         </Style>
                     </DataGrid.Resources>
-
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="PROJECT ID"
-                                            Binding="{Binding Id_proyecto}" 
-                                            Width="100"/>
-
-                        <DataGridTextColumn Header="NAME" 
-                                            Binding="{Binding Nombre_proyecto}" 
-                                            Width="300"/>
-
-                        <DataGridTextColumn Header="DESCRIPTION" 
-                                            Binding="{Binding Descripcion_proyecto}"
-                                            Width="835"/>
-                    </DataGrid.Columns>
 
                 </DataGrid>
 
@@ -187,8 +176,8 @@
                     Height="25"
                     Padding="0"
                     BorderBrush="White"
-                    Click="Button_Click"
-                    Style="{StaticResource MaterialDesignOutlinedButton}">
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonAddBudget_Click">
 
                 <materialDesign:PackIcon Kind="CreateNewFolder"
                                          HorizontalAlignment="Left"
@@ -205,7 +194,8 @@
                     Height="25"
                     Padding="0"
                     BorderBrush="White"
-                    Style="{StaticResource MaterialDesignOutlinedButton}">
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonEditBudget_Click">
 
                 <materialDesign:PackIcon Kind="FolderEdit"
                                          HorizontalAlignment="Left"
@@ -222,7 +212,8 @@
                     Height="25"
                     Padding="0"
                     BorderBrush="White"
-                    Style="{StaticResource MaterialDesignOutlinedButton}">
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonRemoveBudget_Click">
 
                 <materialDesign:PackIcon Kind="FolderRemove"
                                          HorizontalAlignment="Left"
@@ -261,7 +252,8 @@
                           BorderThickness="0.5,0.5,0.5,0.5"
                           HorizontalGridLinesBrush="White" 
                           VerticalGridLinesBrush="White"
-                          GridLinesVisibility="All">
+                          GridLinesVisibility="All"
+                          SelectionChanged="BudgetsDataGrid_SelectionChanged">
 
                     <DataGrid.Resources>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
@@ -274,24 +266,6 @@
                             <Setter Property="Padding" Value="5,1,5,1"/>
                         </Style>
                     </DataGrid.Resources>
-
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="BUDGET ID"
-                                            Binding="{Binding Id_presupuesto}" 
-                                            Width="100"/>
-
-                        <DataGridTextColumn Header="DESCRIPTION" 
-                                            Binding="{Binding Descripcion_presupuesto}" 
-                                            Width="400"/>
-
-                        <DataGridTextColumn Header="STATE" 
-                                            Binding="{Binding Estado_del_presupuesto}"
-                                            Width="400"/>
-
-                        <DataGridTextColumn Header="DATE" 
-                                            Binding="{Binding Fecha_realizacion}"
-                                            Width="320"/>
-                    </DataGrid.Columns>
 
                 </DataGrid>
 
@@ -316,8 +290,8 @@
                     Height="25"
                     Padding="0"
                     BorderBrush="White"
-                    Click="Button_Click"
-                    Style="{StaticResource MaterialDesignOutlinedButton}">
+                    Style="{StaticResource MaterialDesignOutlinedButton}"                    
+                    Click="ButtonAddChapter_Click">
 
                 <materialDesign:PackIcon Kind="CreateNewFolder"
                                          HorizontalAlignment="Left"
@@ -334,7 +308,8 @@
                     Height="25"
                     Padding="0"
                     BorderBrush="White"
-                    Style="{StaticResource MaterialDesignOutlinedButton}">
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonEditChapter_Click">
 
                 <materialDesign:PackIcon Kind="FolderEdit"
                                          HorizontalAlignment="Left"
@@ -351,7 +326,8 @@
                     Height="25"
                     Padding="0"
                     BorderBrush="White"
-                    Style="{StaticResource MaterialDesignOutlinedButton}">
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonRemoveChapter_Click">
 
                 <materialDesign:PackIcon Kind="FolderRemove"
                                          HorizontalAlignment="Left"
@@ -395,7 +371,8 @@
                           BorderThickness="0.5,0.5,0.5,0.5"
                           HorizontalGridLinesBrush="White" 
                           VerticalGridLinesBrush="White"
-                          GridLinesVisibility="All" Margin="0,0,-0.4,-0.6" Grid.RowSpan="2">
+                          GridLinesVisibility="All" Margin="0,0,-0.4,-0.6" Grid.RowSpan="2"
+                          SelectionChanged="ChaptersDataGrid_SelectionChanged">
 
                     <DataGrid.Resources>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
@@ -408,17 +385,6 @@
                             <Setter Property="Padding" Value="5,1,5,1"/>
                         </Style>
                     </DataGrid.Resources>
-
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="CHAPTER ID"
-                                            Binding="{Binding Id_capitulo}" 
-                                            Width="100"/>
-
-                        <DataGridTextColumn Header="DESCRIPTION" 
-                                            Binding="{Binding Descripcion_capitulo}" 
-                                            Width="1105"/>
-
-                    </DataGrid.Columns>
 
                 </DataGrid>
 
@@ -443,8 +409,8 @@
                     Height="25"
                     Padding="0"
                     BorderBrush="White"
-                    Click="Button_Click"
-                    Style="{StaticResource MaterialDesignOutlinedButton}">
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonAddItem_Click">
 
                 <materialDesign:PackIcon Kind="CreateNewFolder"
                                          HorizontalAlignment="Left"
@@ -461,7 +427,8 @@
                     Height="25"
                     Padding="0"
                     BorderBrush="White"
-                    Style="{StaticResource MaterialDesignOutlinedButton}">
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonEditItem_Click">
 
                 <materialDesign:PackIcon Kind="FolderEdit"
                                          HorizontalAlignment="Left"
@@ -478,7 +445,8 @@
                     Height="25"
                     Padding="0"
                     BorderBrush="White"
-                    Style="{StaticResource MaterialDesignOutlinedButton}">
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="ButtonEditItem_Click">
 
                 <materialDesign:PackIcon Kind="FolderRemove"
                                          HorizontalAlignment="Left"
@@ -530,21 +498,6 @@
                             <Setter Property="Padding" Value="5,1,5,1"/>
                         </Style>
                     </DataGrid.Resources>
-
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="ITEM ID"
-                                            Binding="{Binding Id_unitario}" 
-                                            Width="100"/>
-
-                        <DataGridTextColumn Header="DESCRIPTION" 
-                                            Binding="{Binding Descripcion_unitario}" 
-                                            Width="700"/>
-
-                        <DataGridTextColumn Header="UNIT" 
-                                            Binding="{Binding Unidad_medida_unitario}"
-                                            Width="390"/>
-
-                    </DataGrid.Columns>
 
                 </DataGrid>
 

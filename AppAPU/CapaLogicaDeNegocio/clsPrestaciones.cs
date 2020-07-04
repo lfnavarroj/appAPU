@@ -59,5 +59,15 @@ namespace CapaLogicaDeNegocio
             sql += "where codigo_prestacion = " + Codigo_prestacion;
             obj.Ejecutar_sql(sql);
         }
+
+        public DataTable ClonarPrestaciones()
+        {
+            ConexionSQLServer obj = new ConexionSQLServer();
+            obj.IniciarConexion();
+            string sql = "select * ";
+            sql += "from Prestaciones where codigo_prestacion = 3";
+            DataTable datos = obj.EjecutarConsulta(sql);
+            return datos;
+        }
     }
 }

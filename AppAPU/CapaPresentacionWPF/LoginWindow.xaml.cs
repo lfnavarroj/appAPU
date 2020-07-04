@@ -74,5 +74,15 @@ namespace CapaPresentacionWPF
         {
             this.WindowState = WindowState.Minimized;
         }
+
+        private void TextBoxUsername_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBoxUsername.Text = string.Empty;      
+        }
+
+        private void txtPassword_GotFocus(object sender, RoutedEventArgs e)
+        {
+            txtPassword.Password = string.Empty;
+        }
     }
 }

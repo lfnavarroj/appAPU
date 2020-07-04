@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Joaquin\Desktop\PROYECTO_APU\appapu\AppAPU\CapaPresentacionWPF\App.xaml
-132035304923
+17-909138051
 
-18-363123147
+22-275464641
 18-1998991375
-Add_Edit_Windows\EquipmentWindow.xaml;Add_Edit_Windows\MaterialWindow.xaml;Add_Edit_Windows\ServiceWindow.xaml;Add_Edit_Windows\ToolWindow.xaml;ButtonTheme.xaml;LoginWindow.xaml;MainWindow.xaml;UserControls\Help.xaml;UserControls\ManageProjects.xaml;UserControls\ManageResources.xaml;UserControls\ManageUsers.xaml;UserControls\Settings.xaml;Add_Edit_Windows\UserWindow.xaml;
+Add_Edit_Windows\BudgetWindow.xaml;Add_Edit_Windows\ChapterWindow.xaml;Add_Edit_Windows\EquipmentWindow.xaml;Add_Edit_Windows\MaterialWindow.xaml;Add_Edit_Windows\ProjectWindow.xaml;Add_Edit_Windows\ServiceWindow.xaml;Add_Edit_Windows\ToolWindow.xaml;Add_Edit_Windows\UnitWindow.xaml;ButtonTheme.xaml;LoginWindow.xaml;MainWindow.xaml;UserControls\Help.xaml;UserControls\ManageProjects.xaml;UserControls\ManageResources.xaml;UserControls\ManageUsers.xaml;UserControls\Settings.xaml;Add_Edit_Windows\UserWindow.xaml;
 
-True
+False
 

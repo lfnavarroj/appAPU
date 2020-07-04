@@ -103,7 +103,7 @@ namespace CapaPresentacionWPF.Add_Edit_Windows
                     {
                         clsEquipos nuevo_equipo = new clsEquipos
                         {
-                            Numero_de_serie = long.Parse(serial_TB.Text),
+                            Numero_de_serie = int.Parse(serial_TB.Text),
                             Descripcion_equipo = description_TB.Text,
                             Unidad_equipo = unit_TB.Text,
                             Valor_uso_equipo = float.Parse(value_TB.Text)

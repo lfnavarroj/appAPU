@@ -91,8 +91,11 @@ namespace CapaPresentacionWPF
             switch (index)
             {
                 case 0:
-                    MainGrid.Children.Clear();
-                    MainGrid.Children.Add(new ManageProjects());
+                    if (perfil == "Engineer")
+                    {
+                        MainGrid.Children.Clear();
+                        MainGrid.Children.Add(new ManageProjects());
+                    }
                     break;
 
                 case 1:

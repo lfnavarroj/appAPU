@@ -94,7 +94,7 @@
         <StackPanel Grid.Row="1">
             <StackPanel Orientation="Horizontal">
                 <TextBox x:Name="TextBoxUsername" 
-                         Text="20201495001"
+                         Text="Username"
                          FontFamily="Candida Light"
                          FontSize="20"
                          HorizontalAlignment="Center"
@@ -104,7 +104,8 @@
                          Width="230"
                          HorizontalContentAlignment="Left"
                          Opacity="0.5"
-                         Margin="67,0,0,0"/>
+                         Margin="67,0,0,0"
+                         GotFocus="TextBoxUsername_GotFocus"/>
 
                 <iconPacks:PackIconMaterial Kind="Account"
                                             VerticalAlignment="Center"
@@ -118,7 +119,7 @@
                     Opacity="0.5"/>
 
             <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
-                <PasswordBox x:Name="txtPassword" Password="20201495001"
+                <PasswordBox x:Name="txtPassword" Password="Password"
                              FontFamily="Candida Light"
                              FontSize="20"
                              HorizontalAlignment="Center"
@@ -128,7 +129,8 @@
                              Width="230"
                              HorizontalContentAlignment="Left"
                              Opacity="0.5"
-                             Margin="67,0,0,0"/>
+                             Margin="67,0,0,0"
+                             GotFocus="txtPassword_GotFocus"/>
 
                 <iconPacks:PackIconMaterial Kind="FormTextboxPassword"
                                             VerticalAlignment="Center"
@@ -150,6 +152,7 @@
                         Height="25" 
                         Content="LOGIN" 
                         Click="Button_Click"
+                        IsDefault="True"
                         Style="{StaticResource simpleButton}"/>
                 
             </StackPanel>

@@ -21,8 +21,9 @@ namespace CapaDeDatos
         {
             //Data Source=nibiruserver.database.windows.net;Initial Catalog=bdnibiru;Persist Security Info=True;User ID=lfnavarroj;Password=felipe@1987
             //conexion = new SqlConnection("Data Source=nibiruserver.database.windows.net;Initial Catalog=bdnibiru;Persist Security Info=True;User ID=lfnavarroj;Password=felipe@1987");
-            conexion = new SqlConnection("Data Source=LAPTOP-BLDD2OM3;Initial Catalog=APU;Integrated Security=True");// Conexión Local
+            //conexion = new SqlConnection("Data Source=LAPTOP-BLDD2OM3;Initial Catalog=APU;Integrated Security=True");// Conexión Local
             //Data Source=DESKTOP-AR879QI;Initial Catalog=NibiruBD;Integrated Security=True
+            conexion = new SqlConnection("Data Source=appapuserver.database.windows.net;Initial Catalog=APU;Persist Security Info=True;User ID=lfnavarroj;Password=felipe@1987");
         }
 
         public static SqlConnection ObtenerConexion()
